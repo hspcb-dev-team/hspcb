@@ -458,7 +458,7 @@ body {
 										<input name="_ctl0:ContentPlaceHolder1:txtusername"
 											type="text" id="txtusername" tabindex="1"
 											placeholder="Enter Username"
-											class="form-control form-control-lg"
+											class="form-control"
 											style="width: 90%; margin-bottom: 0px;" /> <span
 											controltovalidate="txtusername" focusOnError="t"
 											errormessage="Please Enter Username" display="Dynamic"
