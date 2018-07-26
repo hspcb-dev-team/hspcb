@@ -2,18 +2,21 @@ package org.hspcb.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.hspcb.contoller.Service;
+import org.hspcb.service.Service;
 
 public class LoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+<<<<<<< HEAD
 		response.setContentType("text/html");
+=======
+		request.getRequestDispatcher("Welcome.jsp").forward(request, response);
+		/*response.setContentType("text/html");
+>>>>>>> refs/remotes/origin/master
 		PrintWriter out = response.getWriter();
 
 		String n = request.getParameter("_ctl0:ContentPlaceHolder1:txtusername");
@@ -33,6 +36,6 @@ public class LoginServlet extends HttpServlet {
 			rd.include(request, response);
 		}
 
-		out.close();
+		out.close();*/
 	}
 }
