@@ -11,9 +11,9 @@ import org.hspcb.service.Service;
 
 public class LoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-<<<<<<< HEAD
+
 		response.setContentType("text/html");
-=======
+
 		request.getRequestDispatcher("Welcome.jsp").forward(request, response);
 		/*response.setContentType("text/html");
 >>>>>>> refs/remotes/origin/master
