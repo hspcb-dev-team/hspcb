@@ -13,25 +13,24 @@ import org.hspcb.contoller.Service;
 
 public class LoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 
-		String n = request.getParameter("username");
-		String p = request.getParameter("userpass");
+		String n = request.getParameter("_ctl0:ContentPlaceHolder1:txtusername");
+		String p = request.getParameter("_ctl0:ContentPlaceHolder1:txtpwd");
 
 		System.out.println("User: " + n + " Name" + p);
 
 		if (Service.validate(n, p)) {
-
-			String name = request.getParameter("username");
-			out.print("Welcome " + name);
-			// RequestDispatcher rd=request.getRequestDispatcher("servlet2");
-			// rd.forward(request,response);
+			// String name = request.getParameter("username");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/home.jsp");
+			out.print("Welcome " + n);
+			rd.forward(request, response);
 		} else {
-			out.print("Sorry username or password error");
-			// RequestDispatcher rd=request.getRequestDispatcher("index.html");
-			// rd.include(request,response);
+			String final_resp ="<html><head><body><h1><font color:red>User/Password does not match!!!</font></h1></body></head></html>";
+			out.print(final_resp);			
+			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+			rd.include(request, response);
 		}
 
 		out.close();

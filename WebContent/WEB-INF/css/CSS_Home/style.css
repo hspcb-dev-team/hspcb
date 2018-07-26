@@ -1,0 +1,94 @@
+
+
+
+#DreamSlider-1475 *{border:0;outline:0;font-size:100%;line-height:1.2em;vertical-align:baseline;background:transparent;margin:0;padding:0}
+#DreamSlider-1475 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+#DreamSlider-1475 ol,
+#DreamSlider-1475 ul{list-style:none}
+#DreamSlider-1475 li{list-style-type:none!important}
+#DreamSlider-1475 a:link{text-decoration:none;outline:none}
+#DreamSlider-1475 a:visited{text-decoration:none}
+#DreamSlider-1475 .Navigator-Setting{display:none}
+
+ 
+#DreamSlider-1475{width:809px;margin:0 auto}
+#DreamSlider-1475 .container-outer{position:relative}
+#DreamSlider-1475 .container{position:relative;width:auto !important;background-color:#ffffff;border:1px solid #CCCCCC;border-bottom:0px;overflow:hidden;margin-right: 12px;}
+#DreamSlider-1475 .container-bottom{position:relative;width:809px;overflow:hidden}
+#DreamSlider-1475 .container-bottom div.bottom-left{background-image:url('/DesktopModules/DreamSlider/Templates/BS-Borna/Images/bar.png');background-position:0px 0px;background-repeat:no-repeat}
+#DreamSlider-1475 .container-bottom div.bottom-right{background-image:url('/DesktopModules/DreamSlider/Templates/BS-Borna/Images/bar.png');background-position:100% -40px;background-repeat:no-repeat;padding:0px 10px 0px 10px}
+#DreamSlider-1475 .container-bottom div.bottom-center{background-image:url('/DesktopModules/DreamSlider/Templates/BS-Borna/Images/bar.png');background-position:0px -80px;background-repeat:repeat-x;position:relative;height:31px}
+
+
+#DreamSlider-1475 .slide-wrapper{width:809px;height:295px;position:relative;overflow:hidden}
+#DreamSlider-1475 .slide-wrapper .DS-slide{}
+
+
+#DreamSlider-1475 .introtext{width:270px;height:109px;position:absolute;right:5px;bottom:5px;color:#ffffff;z-index:4;overflow:hidden}
+#DreamSlider-1475 .introtext li{border:2px solid #2f2f2d}
+#DreamSlider-1475 .DS-IntroText .intro-item{padding:5px}
+#DreamSlider-1475 .DS-IntroText div{padding:0px 5px}
+#DreamSlider-1475 .DS-IntroText .intro-item .intro-title{font-family:Arial,Tahoma,Verdana,Trebuchet,sans-serif;font-size:1.250em;font-weight:bold;color:#fea700 !important}
+#DreamSlider-1475 .DS-IntroText .intro-item .intro-title a{font-family:Arial,Tahoma,Verdana,Trebuchet,sans-serif;font-size:1.250em;font-weight:bold;color:#fea700 !important;text-decoration:none}
+#DreamSlider-1475 .DS-IntroText .intro-item .intro-title a:hover{text-decoration:underline}
+#DreamSlider-1475 .DS-IntroText .intro-item .intro-description{font-family:Arial,Tahoma,Verdana,Trebuchet,sans-serif;font-size:0.9em;color:#f4f4f4;padding:5px}
+
+
+#DreamSlider-1475 .DS-ProgressBar{width:70px;height:1px;background:none;border:solid 1px #bebebe;position:absolute;left:6px;top:8px;display:block;text-align:left;z-index:4}
+#DreamSlider-1475 .DS-ProgressBar div{background-color:#CCCCCC;width:100%;height:100%;display:block}
+
+
+#DreamSlider-1475 .DS-Loading{width:100%;height:100%;position:absolute;left:0px;top:0px;z-index:6;background:#ffffff url('/DesktopModules/DreamSlider/Templates/BS-Borna/images/loading.gif') no-repeat center}
+
+
+#DreamSlider-1475 .DS-slideLoading{width:72px;position:absolute;left:6px;top:14px;background:url('/DesktopModules/DreamSlider/Templates/BS-Borna/images/loading-90.gif') no-repeat left;float:left;z-index:4;overflow:hidden}
+
+
+#DreamSlider-1475 .nav-wrapper-II{position:absolute;left:0px;top:5px;width:80%;height:20px;text-align:left}
+#DreamSlider-1475 .navigator-II{position:relative;left:0;top:0}
+#DreamSlider-1475 .navigator-II ul{}
+#DreamSlider-1475 .navigator-II ul li{background:transparent url('/DesktopModules/DreamSlider/Templates/BS-Borna/Images/navigator-I.png') no-repeat 0 0;width:20px;height:20px;margin:1px;cursor:pointer;display:block;float:left;text-align:center;overflow:hidden}
+#DreamSlider-1475 .navigator-II ul li.nav-active-II{background:transparent url('/DesktopModules/DreamSlider/Templates/BS-Borna/Images/navigator-I.png') no-repeat -20px 0}
+#DreamSlider-1475 .navigator-II ul li.nav-inactive-II{}
+#DreamSlider-1475 .navigator-II ul li:hover{}
+
+
+#DreamSlider-1475 .Controller-I{position:absolute;right:0px;top:8px;width:75px;height:20px;display:block;overflow:hidden}
+#DreamSlider-1475 .Controller-I .DS-Previous,
+#DreamSlider-1475 .Controller-I .DS-Backward,
+#DreamSlider-1475 .Controller-I .DS-Play,
+#DreamSlider-1475 .Controller-I .DS-Pause,
+#DreamSlider-1475 .Controller-I .DS-Forward,
+#DreamSlider-1475 .Controller-I .DS-Next{background-image:url('/DesktopModules/DreamSlider/Templates/BS-Borna/images/controller-arrows.png');background-repeat:no-repeat;width:15px;height:16px;display:block;float:left;cursor:pointer}
+#DreamSlider-1475 .DS-Previous{background-position:0px 0px}
+#DreamSlider-1475 .DS-Previous:hover{background-position:0px -16px}
+#DreamSlider-1475 .DS-Backward{background-position:-15px 0px}
+#DreamSlider-1475 .DS-Backward:hover{background-position:-15px -16px}
+#DreamSlider-1475 .DS-Play{background-position:-30px 0px}
+#DreamSlider-1475 .DS-Play:hover{background-position:-30px -16px}
+#DreamSlider-1475 .DS-Pause{background-position:-45px 0px}
+#DreamSlider-1475 .DS-Pause:hover{background-position:-45px -16px}
+#DreamSlider-1475 .DS-Forward{background-position:-60px 0px}
+#DreamSlider-1475 .DS-Forward:hover{background-position:-60px -16px}
+#DreamSlider-1475 .DS-Next{background-position:-75px 0px}
+#DreamSlider-1475 .DS-Next:hover{background-position:-75px -16px}
+
+
+#DreamSlider-1475 .DS-MainNavigator{}
+#DreamSlider-1475 .DS-MainNavigator .DS-MainPause,
+#DreamSlider-1475 .DS-MainNavigator .DS-MainPlay,
+#DreamSlider-1475 .DS-MainNavigator .DS-MainPrevious,
+#DreamSlider-1475 .DS-MainNavigator .DS-MainNext{background-image:url('/DesktopModules/DreamSlider/Templates/BS-Borna/images/MainNavigator.png');background-repeat:no-repeat;width:50px;height:50px;position:absolute;cursor:pointer;display:block;z-index:3}
+#DreamSlider-1475 .DS-MainNavigator .up{background-position:0px 0px;top:0px;left:50%;margin:0px 0px 0px -26px}
+#DreamSlider-1475 .DS-MainNavigator .up:hover{}
+#DreamSlider-1475 .DS-MainNavigator .down{background-position:-50px 0px;bottom:0px;left:50%;margin:0px 0px 0px -26px}
+#DreamSlider-1475 .DS-MainNavigator .down:hover{}
+#DreamSlider-1475 .DS-MainNavigator .left{background-position:-100px 0px;top:50%;left:5px;margin:-25px 0px 0px 0px}
+#DreamSlider-1475 .DS-MainNavigator .left:hover{}
+#DreamSlider-1475 .DS-MainNavigator .right{background-position:-150px 0px;top:50%;right:5px;margin:-25px 0px 0px 0px}
+#DreamSlider-1475 .DS-MainNavigator .right:hover{}
+#DreamSlider-1475 .DS-MainNavigator .play{background-position:-200px 0px;top:50%;left:50%;margin:-23px 0px 0px -26px}
+#DreamSlider-1475 .DS-MainNavigator .play:hover{}
+#DreamSlider-1475 .DS-MainNavigator .pause{background-position:-250px 0px;top:50%;left:50%;margin:-23px 0px 0px -26px}
+#DreamSlider-1475 .DS-MainNavigator .pause:hover{}
+
