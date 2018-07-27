@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.hspcb.bean.UserData;
-import org.hspcb.service.Service;
+import org.hspcb.controller.Service;
 
 
 public class SROData extends HttpServlet {
