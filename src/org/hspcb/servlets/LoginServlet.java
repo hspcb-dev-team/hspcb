@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.hspcb.service.Service;
 
@@ -21,7 +22,9 @@ public class LoginServlet extends HttpServlet {
 		String p = request.getParameter("_ctl0:ContentPlaceHolder1:txtpwd");
 
 		System.out.println("User: " + n + " Name" + p);
-
+		HttpSession session = request.getSession();
+		session.setAttribute( "uname", n );
+//		session.setAttribute( "PWD", p );
 		if (Service.validate(n, p)) {
 			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);;
 			out.print("Welcome " + n);
