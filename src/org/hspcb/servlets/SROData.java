@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.hspcb.bean.UserData;
-import org.hspcb.service.Service;
+import org.hspcb.controller.Service;
 
 
 public class SROData extends HttpServlet {
@@ -31,6 +31,7 @@ public class SROData extends HttpServlet {
 	    Service service=new Service();
 	    try {
 			service.addUserDts(userData);
+			request.getRequestDispatcher("/WEB-INF/views/SROData.jsp").forward(request, response);
 		} catch (SQLException e) {
 			
 			e.printStackTrace();

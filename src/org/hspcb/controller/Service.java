@@ -1,4 +1,4 @@
-package org.hspcb.service;
+package org.hspcb.controller;
 
 import java.sql.*;
 import java.util.ArrayList;
