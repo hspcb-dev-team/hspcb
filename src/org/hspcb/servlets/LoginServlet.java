@@ -18,21 +18,21 @@ public class LoginServlet extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 
-		String n = request.getParameter("_ctl0:ContentPlaceHolder1:txtusername");
-		String p = request.getParameter("_ctl0:ContentPlaceHolder1:txtpwd");
+		String id = request.getParameter("_ctl0:ContentPlaceHolder1:txtuserid");
+		String pwd = request.getParameter("_ctl0:ContentPlaceHolder1:txtpwd");
 
-		System.out.println("User: " + n + " Name" + p);
+		System.out.println("User id: " + id + " Password" + pwd);
 		HttpSession session = request.getSession();
-		session.setAttribute( "uname", n );
+		session.setAttribute( "uid", id );
 //		session.setAttribute( "PWD", p );
-		if (Service.validate(n, p)) {
+		//if (Service.validate(id, pwd)) {
 			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);;
-			out.print("Welcome " + n);
-		} else {
+			out.print("Welcome " + id);
+		/*} else {
 			String final_resp ="<html><head><body><h1><font color:red>User/Password does not match!!!</font></h1></body></head></html>";
 			out.print(final_resp);			
 			request.getRequestDispatcher("index.jsp").include(request, response);
-		}
+		}*/
 
 		out.close();
 	}

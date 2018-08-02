@@ -9,15 +9,15 @@ import org.hspcb.dao.ConnectMYSQLServer;
 
 public class Service {
 
-	public static boolean validate(String name, String pass) {
+	public static boolean validate(String id, String pass) {
 		boolean status = false;
 		try {
 			System.out.println("Getting DB Connection");
 			ConnectMYSQLServer connectMYSQLServer = new ConnectMYSQLServer();
 			Connection conn = connectMYSQLServer.dbConnect();
 
-			PreparedStatement ps = conn.prepareStatement("select * from hspcb.USER_INFO where FirstName=? and LastName=?");
-			ps.setString(1, name);
+			PreparedStatement ps = conn.prepareStatement("select * from hspcb.user_Login where EmployeeId=? and Password=?");
+			ps.setString(1, id);
 			ps.setString(2, pass);
 			System.out.println("SQL Query: " + status);
 			ResultSet rs = ps.executeQuery();
@@ -29,16 +29,14 @@ public class Service {
 		return status;
 	}
 
-	public void  addUserDts(UserData userData) throws SQLException{
+	/*public void  addUserDts(UserData userData) throws SQLException{
 		System.out.println("Adding");
 		String query="INSERT INTO hspcb.SRODATA values (?,?,?)";
 		System.out.println("Getting DB Connection");
 		ConnectMYSQLServer connectMYSQLServer = new ConnectMYSQLServer();
 		Connection connection = connectMYSQLServer.dbConnect();
 		PreparedStatement pstatement=connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
-System.out.println("1"+query);
-		String name=userData.getUsername();
-		String pwd=userData.getPassword();
+       System.out.println("1"+query);
 		pstatement.setString(1, null);
 		pstatement.setString(2, name);
 		pstatement.setString(3, pwd);
@@ -62,5 +60,5 @@ System.out.println("1"+query);
 			userInfo.add(userData);
 		}
 		return userInfo;
-	}
+	}*/
 }

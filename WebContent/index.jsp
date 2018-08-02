@@ -455,7 +455,7 @@ body {
 										<span id="Label3" style="color: black;">User Name : </span>
 									</h2>
 									<div class="col-sm-9">
-										<input name="_ctl0:ContentPlaceHolder1:txtusername"
+										<input name="_ctl0:ContentPlaceHolder1:txtuserid"
 											type="text" id="txtusername" tabindex="1"
 											placeholder="Enter Username"
 											class="form-control"
