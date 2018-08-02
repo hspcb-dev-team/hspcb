@@ -25,14 +25,14 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute( "uid", id );
 //		session.setAttribute( "PWD", p );
-		//if (Service.validate(id, pwd)) {
+		if (Service.validate(id, pwd)) {
 			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);;
 			out.print("Welcome " + id);
-		/*} else {
+		} else {
 			String final_resp ="<html><head><body><h1><font color:red>User/Password does not match!!!</font></h1></body></head></html>";
 			out.print(final_resp);			
 			request.getRequestDispatcher("index.jsp").include(request, response);
-		}*/
+		}
 
 		out.close();
 	}

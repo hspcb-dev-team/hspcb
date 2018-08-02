@@ -19,7 +19,7 @@
 	src="/OCMMS/plugins/calendar-1.2.0-SNAPSHOT3/js/calendar-setup.js"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>SPCB</title>
+<title>HSPCB</title>
 
 <link rel="stylesheet" type="text/css" href="/OCMMS/css/main.css" />
 <link rel="stylesheet" type="text/css" href="/OCMMS/css/anylinkmenu.css" />
@@ -361,12 +361,7 @@ End date : <input name="ExpiryDate" type="text" id="ExpiryDate" size="10" maxlen
 													</table>
 
 
-
-
-
-
-													<%
-
+<% 
 String driver = "com.mysql.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
 String database = "hspcb";
