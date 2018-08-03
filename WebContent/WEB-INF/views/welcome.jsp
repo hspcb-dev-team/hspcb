@@ -182,13 +182,13 @@ a:active {
 													<table width="100%" border="0" align="center"
 														cellpadding="2" cellspacing="1" class="tblbdr">
 Start date :<input name="ExpiryDate" type="text" id="ExpiryDate" size="10" maxlength="10" />
-<!-- <img src="images/haryana-govt1_1.png" onClick="displayDatePicker("ExpiryDate");"> -->
+<img src="images/haryana-govt1_1.png" onClick="displayDatePicker("ExpiryDate");">
 
 
 End date : <input name="ExpiryDate" type="text" id="ExpiryDate" size="10" maxlength="10" />
 <img src="images/haryana-govt1_1.png" onClick="displayDatePicker("ExpiryDate");">
 
-														<!-- <tr bgcolor="#E8F6F9">
+													<tr bgcolor="#E8F6F9">
 															<td width="12%" align="left" class="headngblue">Start
 																Date:</td>
 															<td width="33%" align="left"><input type="hidden"

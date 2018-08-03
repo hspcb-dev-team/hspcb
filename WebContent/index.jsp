@@ -527,8 +527,9 @@ body {
 												onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;_ctl0:ContentPlaceHolder1:btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
 												language="javascript" id="btnLogin" class="button"
 												style="vertical-align: middle;" />
-
+											
 										</div>
+										<a class="link-g " href="/OCMMS/indCatMaster/forgetPassword">Forgot Password</a>
 									</div>
 								</div>
 								<div class="form-group" style="text-align: center;">
