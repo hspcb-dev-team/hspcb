@@ -276,6 +276,12 @@ body {
 <body>
 
 	<style>
+	
+.link-g{
+color:#2d4d03;
+text-decoration:none;
+}	
+	
 .form-control {
 	border-radius: 0px;
 	margin: 12px 3px;
@@ -452,7 +458,7 @@ body {
 							<div class="panel-body">
 								<div class="form-group">
 									<h2 style="background: transparent">
-										<span id="Label3" style="color: black;">User Name : </span>
+										<span id="Label3" style="color: black;">User ID : </span>
 									</h2>
 									<div class="col-sm-9">
 										<input name="_ctl0:ContentPlaceHolder1:txtuserid"
@@ -527,9 +533,9 @@ body {
 												onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;_ctl0:ContentPlaceHolder1:btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
 												language="javascript" id="btnLogin" class="button"
 												style="vertical-align: middle;" />
-											
+										<a class="link-g " href="forgotpwd.jsp">Forgot your password?</a>	
 										</div>
-										<a class="link-g " href="/OCMMS/indCatMaster/forgetPassword">Forgot Password</a>
+										
 									</div>
 								</div>
 								<div class="form-group" style="text-align: center;">

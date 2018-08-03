@@ -10,55 +10,68 @@ import org.hspcb.dao.ConnectMYSQLServer;
 public class Service {
 
 	public static boolean validate(String id, String pass) {
-		boolean status = false;
+		boolean validStatus = false;
 		try {
 			System.out.println("Getting DB Connection");
 			ConnectMYSQLServer connectMYSQLServer = new ConnectMYSQLServer();
 			Connection conn = connectMYSQLServer.dbConnect();
 
-			PreparedStatement ps = conn.prepareStatement("select * from hspcb.user_Login where EmployeeId=? and Password=?");
+			PreparedStatement ps = conn
+					.prepareStatement("select * from hspcb.user_Login where EmployeeId=? and Password=?");
 			ps.setString(1, id);
 			ps.setString(2, pass);
-			System.out.println("SQL Query: " + status);
 			ResultSet rs = ps.executeQuery();
-			status = rs.next();
-			System.out.println("Status" + status);
+			validStatus = rs.next();
+			System.out.println("Status" + validStatus);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
-		return status;
+		return validStatus;
 	}
 
-	/*public void  addUserDts(UserData userData) throws SQLException{
-		System.out.println("Adding");
-		String query="INSERT INTO hspcb.SRODATA values (?,?,?)";
-		System.out.println("Getting DB Connection");
-		ConnectMYSQLServer connectMYSQLServer = new ConnectMYSQLServer();
-		Connection connection = connectMYSQLServer.dbConnect();
-		PreparedStatement pstatement=connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
-       System.out.println("1"+query);
-		pstatement.setString(1, null);
-		pstatement.setString(2, name);
-		pstatement.setString(3, pwd);
-
-		System.out.println("2"+query);
-		int count =pstatement.executeUpdate();
-		System.out.println("count"+count);
-	}
-	public List<UserData> getDepatmentlist() throws SQLException{
-		String query="select * from hspcb.user_info";
-		ConnectMYSQLServer connectMYSQLServer = new ConnectMYSQLServer();
-		Connection connection = connectMYSQLServer.dbConnect();
-		PreparedStatement pstatement=connection.prepareStatement(query);
-		ResultSet rset=pstatement.executeQuery();
-		List<UserData> userInfo = new ArrayList<UserData>();
-		while(rset.next()){
-			UserData userData= new UserData();
-			
-			userData.setUsername(rset.getString(1));
-			userData.setPassword(rset.getString(2));
-			userInfo.add(userData);
+	public static boolean updatePwd(String id, String pass) {
+		boolean updateStatus = false;
+		try {
+			System.out.println("Getting DB Connection");
+			ConnectMYSQLServer connectMYSQLServer = new ConnectMYSQLServer();
+			Connection conn = connectMYSQLServer.dbConnect();
+			String sqlQuery = "UPDATE hspcb.user_Login SET Password=?  where EmployeeId=?";
+			PreparedStatement ps = conn.prepareStatement(sqlQuery);
+			ps.setString(1, pass);
+			ps.setString(2, id);
+			int value = ps.executeUpdate();
+			if(value == 1)
+				updateStatus=true;
+			System.out.println("Status" + updateStatus);
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-		return userInfo;
-	}*/
+		return updateStatus;
+	}
+
+	/*
+	 * public void addUserDts(UserData userData) throws SQLException{
+	 * System.out.println("Adding"); String
+	 * query="INSERT INTO hspcb.SRODATA values (?,?,?)";
+	 * System.out.println("Getting DB Connection"); ConnectMYSQLServer
+	 * connectMYSQLServer = new ConnectMYSQLServer(); Connection connection =
+	 * connectMYSQLServer.dbConnect(); PreparedStatement
+	 * pstatement=connection.prepareStatement(query,
+	 * PreparedStatement.RETURN_GENERATED_KEYS); System.out.println("1"+query);
+	 * pstatement.setString(1, null); pstatement.setString(2, name);
+	 * pstatement.setString(3, pwd);
+	 * 
+	 * System.out.println("2"+query); int count =pstatement.executeUpdate();
+	 * System.out.println("count"+count); } public List<UserData> getDepatmentlist()
+	 * throws SQLException{ String query="select * from hspcb.user_info";
+	 * ConnectMYSQLServer connectMYSQLServer = new ConnectMYSQLServer(); Connection
+	 * connection = connectMYSQLServer.dbConnect(); PreparedStatement
+	 * pstatement=connection.prepareStatement(query); ResultSet
+	 * rset=pstatement.executeQuery(); List<UserData> userInfo = new
+	 * ArrayList<UserData>(); while(rset.next()){ UserData userData= new UserData();
+	 * 
+	 * userData.setUsername(rset.getString(1));
+	 * userData.setPassword(rset.getString(2)); userInfo.add(userData); } return
+	 * userInfo; }
+	 */
 }
