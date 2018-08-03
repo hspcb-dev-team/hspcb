@@ -2,6 +2,7 @@ package org.hspcb.bean;
 
 public class UserData {
 	private String sub_rgn;
+	
 	private String ofcr_name;
 	private String cto_rcvd;
 	private String cto_pndng;
