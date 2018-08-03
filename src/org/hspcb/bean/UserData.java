@@ -4,9 +4,12 @@ public class UserData {
 	private String sub_rgn;
 	
 	private String ofcr_name;
+	
 	private String cto_rcvd;
+	
 	private String cto_pndng;
 	private String cto_grntd;
+	
 	private String cto_rjctd;
 	private String cte_rcvd;
 	private String cte_pndng;
