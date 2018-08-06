@@ -31,10 +31,11 @@
 
 
 <script type="text/javascript" src="js/tabcontent.js">
-    </script>
+	
+</script>
 <script type="text/javascript">
-        anylinkmenu.init("menuanchorclass")
-    </script>
+	anylinkmenu.init("menuanchorclass")
+</script>
 <script type="text/javascript" src="/OCMMS/js/prototype/prototype.js"></script>
 <script type="text/javascript"
 	src="/OCMMS/js/prototype/scriptaculous.js"></script>
@@ -52,7 +53,9 @@
 			<td class="top-lnks">
 				<table>
 					<tr>
-						<%	String user = (String) session.getAttribute("uid"); %>
+						<%
+							String user = (String) session.getAttribute("uid");
+						%>
 						<h2 align="left">
 							Welcome
 							<%=user%></h2>
@@ -63,15 +66,15 @@
 		</tr>
 	</table>
 
-	<table>
+	<!--  	<table>
 		<tr>
 			<td>Start date :<input name="ExpiryDate" type="date"
 				id="ExpiryDate" size="10" maxlength="10" /></td>
-			<!-- <img src="images/haryana-govt1_1.png" onClick="displayDatePicker("ExpiryDate");"> -->
+			<img src="images/haryana-govt1_1.png" onClick="displayDatePicker("ExpiryDate");">
 			<td>End date : <input name="ExpiryDate" type="date"
 				id="ExpiryDate" size="10" maxlength="10" /></td>
 		</tr>
-		<!-- <img src="images/haryana-govt1_1.png" onClick="displayDatePicker("ExpiryDate");"> -->
+		<img src="images/haryana-govt1_1.png" onClick="displayDatePicker("ExpiryDate");">
 
 		<tr>
 			<td align="left" class="headngblue">Region:</td>
@@ -114,38 +117,36 @@
 		</tr>
 
 	</table>
+-->
 
-	<table  align="center" cellpadding="0" cellspacing="0"
-		class="tab-txt">
+	<table align="center" cellpadding="0" cellspacing="0" class="tab-txt">
 		<tr>
-			<td colspan="9" align="center"><span class="headngblue">Performance
+			<td colspan="9" align="center"><span class="headngblue"><h2>Performance
 					report of regional officers on the basis of Application Disposal of
-					CTE/CTO/HWM/BMW/E-Waste/Plastic Waste </span></td>
+					CTE/CTO/HWM/BMW/E-Waste/Plastic Waste </h2> </span></td>
 		</tr>
 
 	</table>
 
-
-	<% 
-String driver = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://localhost:3306/";
-String database = "hspcb";
-String userid = "root";
-String password = "Admin@1234";
-try {
-Class.forName(driver);
-} catch (ClassNotFoundException e) {
-e.printStackTrace();
-}
-Connection connection = DriverManager.getConnection(connectionUrl+database, userid, password);
-Statement statement=connection.createStatement();
-String sql ="select * from hspcb.PerformanceReport";
-ResultSet resultSet = statement.executeQuery(sql);
-
-%>
+	<%
+		String driver = "com.mysql.jdbc.Driver";
+		String connectionUrl = "jdbc:mysql://localhost:3306/";
+		String database = "hspcb";
+		String userid = "root";
+		String password = "Admin@1234";
+		try {
+			Class.forName(driver);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		Connection connection = DriverManager.getConnection(connectionUrl + database, userid, password);
+		Statement statement = connection.createStatement();
+		String sql = "select * from hspcb.PerformanceReport";
+		ResultSet resultSet = statement.executeQuery(sql);
+	%>
 	<table border="1">
-		<tr  bgcolor="#CCFFCC">
-			<td align="center" class="headngblue" rowspan="2">Region Name</td>
+		<tr bgcolor="#CCFFCC">
+<!-- 			<td align="center" class="headngblue" rowspan="2">Region Name</td> -->
 			<td align="center" class="headngblue" rowspan="2">Application
 				type</td>
 			<td align="center" class="headngblue" rowspan="2">Total
@@ -176,50 +177,49 @@ ResultSet resultSet = statement.executeQuery(sql);
 		</tr>
 
 
-		<tr class="odd">
-			<td align="center" class="headngblue" rowspan="5">
-			<td>Bahadurghar</td>
-			</td>
+<!-- 		<tr class="odd"> -->
+<!-- 			<td align="center" class="headngblue" rowspan="5"><td>Bahadurgarh</td> -->
+<!-- 			</td> -->
+			
+				<%
+					try {
+						while (resultSet.next()) {
+				%>
+            
+			<td><%=resultSet.getString("Application_Type")%></td>
 
-			<%
-														
-try{
-	
-while(resultSet.next()){
-%>
-            <td><%=resultSet.getString("Application_Type") %></td>
+			<td><%=resultSet.getString("Total_Appln_Received")%></td>
 
-			<td><%=resultSet.getString("Total_Appln_Received") %></td>
+			<td><%=resultSet.getString("Appln_no_30d")%></td>
 
-			<td><%=resultSet.getString("Appln_no_30d") %></td>
+			<td><%=resultSet.getString("Appln_per_30d")%>%</td>
 
-			<td><%=resultSet.getString("Appln_per_30d") %>%</td>
+			<td><%=resultSet.getString("Appln_no_31_45d")%></td>
 
-			<td><%=resultSet.getString("Appln_no_31_45d") %></td>
+			<td><%=resultSet.getString("Appln_per_31_45d")%>%</td>
 
-			<td><%=resultSet.getString("Appln_per_31_45d") %>%</td>
+			<td><%=resultSet.getString("Appln_no_beyond45d")%></td>
 
-			<td><%=resultSet.getString("Appln_no_beyond45d") %></td>
+			<td><%=resultSet.getString("Appln_per_beyond45d")%></td>
 
-			<td><%=resultSet.getString("Appln_per_beyond45d") %></td>
+			<td><%=resultSet.getString("Pending_Appln_no")%></td>
 
-			<td><%=resultSet.getString("Pending_Appln_no") %></td>
+			<td><%=resultSet.getString("Pending_Appln_per")%></td>
 
-			<td><%=resultSet.getString("Pending_Appln_per") %></td>
+			<td><%=resultSet.getString("Pending_Appln_no_gt45d")%></td>
 
-			<td><%=resultSet.getString("Pending_Appln_no_gt45d") %></td>
-
-			<td><%=resultSet.getString("Pending_Appln_per_gt45d") %></td>
+			<td><%=resultSet.getString("Pending_Appln_per_gt45d")%></td>
 
 		</tr>
 
-		<%	}	
-						
-} catch (Exception e) {
-	 connection.close();
-e.printStackTrace();
-}
-%>
+		<%
+			}
+
+			} catch (Exception e) {
+				connection.close();
+				e.printStackTrace();
+			}
+		%>
  </table> 
 
 </body>
