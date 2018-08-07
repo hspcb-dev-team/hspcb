@@ -445,7 +445,7 @@ text-decoration:none;
 <!-- 		</div> -->
 
 
-		<div  style="width: 45%; align-items: stretch;">
+		<div  style="width: 40%; ">
 			<div class="soft">
 				<h2 tabindex="0">
 					<span id="dnn_ctr6335_dnnTITLE_titleLabel11" class="TitleH2">HSPCB

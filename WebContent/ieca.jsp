@@ -22,7 +22,7 @@
 	src="/OCMMS/plugins/calendar-1.2.0-SNAPSHOT3/js/calendar-setup.js"></script>
 
 <meta charset="UTF-8">
-<title>HSPCB Home Page</title>
+<title>IEC Activities</title>
 
 <link rel="stylesheet" type="text/css" href="/OCMMS/css/main.css" />
 <link rel="stylesheet" type="text/css" href="/OCMMS/css/anylinkmenu.css" />
@@ -60,19 +60,19 @@
 						cellspacing="0" cellpadding="0" border="0">
 						<tbody>
 							<tr>
-								<td class="bgtop" valign="top" height="91" align="left">
+<!-- 								<td class="bgtop" valign="top" height="91" align="left"> -->
 									<!-- code for Header  -->
-									<table width="100%" cellspacing="0" cellpadding="0" border="0">
-										<tbody>
-											<tr>
+<!-- 									<table width="100%" cellspacing="0" cellpadding="0" border="0"> -->
+<!-- 										<tbody> -->
+<!-- 											<tr> -->
 												<td width="100%" valign="top" align="left"><img
-													src="/WEB-INF/images/header1.JPG/"
-													alt="Haryana State Pollution Control Board" width="100%"
+													src="/WEB-INF/images/header.png"
+													alt="Haryana State Pollution Control Board" width="1000"
 													height="91"></td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
+<!-- 											</tr> -->
+<!-- 										</tbody> -->
+<!-- 									</table> -->
+<!-- 								</td> -->
 							</tr>
 						</tbody>
 					</table></td>
@@ -169,63 +169,7 @@
 							</tr>
 						</tbody>
 					</table><br/></td>
-				<td>
-				<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="countrytabs">
-                            <tbody align="center"><tr>
-                                  <th><h2>User Management</h2><br/></th>
-
-							</tr>
-	    </tbody></table>
 				
-          <div id="country1" style="display: block;">
-			
-			<table width="95%" border="0" align="center" cellpadding="2" cellspacing="1" class="tblbdr">
-			 
-				 <tbody><tr bgcolor="#F4F7FB">
-                            
-								<td width="40%" align="right" bgcolor="#A8DAF3" class="headngblue">Username *: </td>
-                            <td width="60%" align="left" bgcolor="#E8F6F9" style="color:black" class="txt style6">  <input name="uid_change" type="text" class="txt4" value=""></td>
-                          </tr>
-                         
-                          <tr align="center" bgcolor="#F4F7FB">
-                            <td align="right" valign="middle" bgcolor="#A8DAF3" class="headngblue">Old Password*:</td>
-                            <td align="left" bgcolor="#E8F6F9" class="txt"><input maxlength="25" name="old_change" type="password" id="old" class="txt4">
-                            <span class="txt4">(enter old password)</span></td>
-                          </tr>
-                         
-                          <tr bgcolor="#F4F7FB">
-                            <td align="right" bgcolor="#A8DAF3" class="headngblue">Enter New Password *: </td>
-                            <td align="left" bgcolor="#E8F6F9" class="txt style6">
-                            <input name="newPass1_change" id="newPass1" type="password" class="txt4">
-                            <span class="txt4">(enter new password)</span></td>
-                          </tr>
-                          
-                          <tr bgcolor="#F4F7FB">
-                            <td align="right" bgcolor="#A8DAF3" class="headngblue"> Re-type New Password*: </td>
-                            <td align="left" bgcolor="#E8F6F9" class="txt style6">
-                            <input name="newPass2_change" id="newPass2" type="password" onblur="setChangePass()" class="txt4">
-                            <span class="txt4">(re-enter password)</span></td>
-                          </tr>
-                          <tr>
-        	 
-                        </tr></tbody></table>
-						<table width="95%" border="0" align="center" cellpadding="2" cellspacing="1">
-              <tbody><tr align="center">
-<!--                      <td align="left" valign="middle" class="txt"> <font color="red">*Please follow the password format as (1 Special character(only @,#,$), 1 number and min 8 character in length and maximum 15 character in length)</font></td> -->
-               </tr>
-       </tbody></table>   
-						
-						
-	   <table width="95%" align="center">
-	   		<tbody><tr>
-	   		<td colspan="3">&nbsp;</td>
-	   		</tr>
-		  <tr>
-			<td align="right"><input type="submit" name="Update" value="Update"  class="actionbutton"></td>
-			<td align="left"><input type="reset" name="reset" value="Reset" class="actionbutton"></td>			
-		  </tr>
-		</tbody></table>
-				</td>
 			</tr>
 		</tbody>
 	</table>

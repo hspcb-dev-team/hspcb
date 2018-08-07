@@ -22,7 +22,7 @@
 	src="/OCMMS/plugins/calendar-1.2.0-SNAPSHOT3/js/calendar-setup.js"></script>
 
 <meta charset="UTF-8">
-<title>HSPCB Home Page</title>
+<title>Performance Report</title>
 
 <link rel="stylesheet" type="text/css" href="/OCMMS/css/main.css" />
 <link rel="stylesheet" type="text/css" href="/OCMMS/css/anylinkmenu.css" />
@@ -65,9 +65,9 @@
 									<table width="100%" cellspacing="0" cellpadding="0" border="0">
 										<tbody>
 											<tr>
-												<td width="100%" valign="top" align="left"><img
-													src="/WEB-INF/images/header1.JPG/"
-													alt="Haryana State Pollution Control Board" width="100%"
+												<td width="1003" valign="top" align="left"><img
+													src="/WEB-INF/images/header.JPG"
+													alt="Haryana State Pollution Control Board" width="1000"
 													height="91"></td>
 											</tr>
 										</tbody>
@@ -169,63 +169,104 @@
 							</tr>
 						</tbody>
 					</table><br/></td>
-				<td>
-				<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="countrytabs">
-                            <tbody align="center"><tr>
-                                  <th><h2>User Management</h2><br/></th>
+				<td><table align="center" width="100%" cellpadding="0" cellspacing="0"
+						class="tab-txt">
+						<tr>
+							<td colspan="9" align="center"><span class="headngblue"><h4 align="center">Performance
+										report of regional officers on the basis of Application
+										Disposal of CTE/CTO/HWM/BMW/E-Waste/Plastic Waste</h4> </span></td>
+								<%
+ 	String driver = "com.mysql.jdbc.Driver";
+ 	String connectionUrl = "jdbc:mysql://localhost:3306/";
+ 	String database = "hspcb";
+ 	String userid = "root";
+ 	String password = "Admin@1234";
+ 	try {
+ 		Class.forName(driver);
+ 	} catch (ClassNotFoundException e) {
+ 		e.printStackTrace();
+ 	}
+ 	Connection connection = DriverManager.getConnection(connectionUrl + database, userid, password);
+ 	Statement statement = connection.createStatement();
+ 	String sql = "select * from hspcb.PerformanceReport";
+ 	ResultSet resultSet = statement.executeQuery(sql);
+ %>
+<table border="1">
+<tbody>
+			<tr bgcolor="#CCFFCC">
+				<!-- 			<td align="center" class="headngblue" rowspan="2">Region Name</td> -->
+				<td align="center" class="headngblue" rowspan="2">Application
+					type</td>
+				<td align="center" class="headngblue" rowspan="2">Total
+					applications received</td>
+				<td align="center" class="headngblue" colspan="2">Applications
+					decided within 30 days</td>
+				<td align="center" class="headngblue" colspan="2">Applications
+					decided within 31-45 days</td>
+				<td align="center" class="headngblue" colspan="2">Applications
+					decided beyond 45 days</td>
+				<td align="center" class="headngblue" colspan="2">Pending
+					Applications</td>
+				<td align="center" class="headngblue" colspan="2">Pending
+					Application more than 45 days</td>
 
-							</tr>
-	    </tbody></table>
-				
-          <div id="country1" style="display: block;">
-			
-			<table width="95%" border="0" align="center" cellpadding="2" cellspacing="1" class="tblbdr">
-			 
-				 <tbody><tr bgcolor="#F4F7FB">
-                            
-								<td width="40%" align="right" bgcolor="#A8DAF3" class="headngblue">Username *: </td>
-                            <td width="60%" align="left" bgcolor="#E8F6F9" style="color:black" class="txt style6">  <input name="uid_change" type="text" class="txt4" value=""></td>
-                          </tr>
-                         
-                          <tr align="center" bgcolor="#F4F7FB">
-                            <td align="right" valign="middle" bgcolor="#A8DAF3" class="headngblue">Old Password*:</td>
-                            <td align="left" bgcolor="#E8F6F9" class="txt"><input maxlength="25" name="old_change" type="password" id="old" class="txt4">
-                            <span class="txt4">(enter old password)</span></td>
-                          </tr>
-                         
-                          <tr bgcolor="#F4F7FB">
-                            <td align="right" bgcolor="#A8DAF3" class="headngblue">Enter New Password *: </td>
-                            <td align="left" bgcolor="#E8F6F9" class="txt style6">
-                            <input name="newPass1_change" id="newPass1" type="password" class="txt4">
-                            <span class="txt4">(enter new password)</span></td>
-                          </tr>
-                          
-                          <tr bgcolor="#F4F7FB">
-                            <td align="right" bgcolor="#A8DAF3" class="headngblue"> Re-type New Password*: </td>
-                            <td align="left" bgcolor="#E8F6F9" class="txt style6">
-                            <input name="newPass2_change" id="newPass2" type="password" onblur="setChangePass()" class="txt4">
-                            <span class="txt4">(re-enter password)</span></td>
-                          </tr>
-                          <tr>
-        	 
-                        </tr></tbody></table>
-						<table width="95%" border="0" align="center" cellpadding="2" cellspacing="1">
-              <tbody><tr align="center">
-<!--                      <td align="left" valign="middle" class="txt"> <font color="red">*Please follow the password format as (1 Special character(only @,#,$), 1 number and min 8 character in length and maximum 15 character in length)</font></td> -->
-               </tr>
-       </tbody></table>   
-						
-						
-	   <table width="95%" align="center">
-	   		<tbody><tr>
-	   		<td colspan="3">&nbsp;</td>
-	   		</tr>
-		  <tr>
-			<td align="right"><input type="submit" name="Update" value="Update"  class="actionbutton"></td>
-			<td align="left"><input type="reset" name="reset" value="Reset" class="actionbutton"></td>			
-		  </tr>
-		</tbody></table>
-				</td>
+			</tr>
+			<tr bgcolor="#CCFFCC">
+				<td align="center" class="headngblue">Number</td>
+				<td align="center" class="headngblue">Percentage</td>
+				<td align="center" class="headngblue">Number</td>
+				<td align="center" class="headngblue">Percentage</td>
+				<td align="center" class="headngblue">Number</td>
+				<td align="center" class="headngblue">Percentage</td>
+				<td align="center" class="headngblue">Number</td>
+				<td align="center" class="headngblue">Percentage</td>
+				<td align="center" class="headngblue">Number</td>
+				<td align="center" class="headngblue">Percentage</td>
+			</tr>
+<tr>
+<%
+				try {
+					while (resultSet.next()) {
+			%>
+			<td><%=resultSet.getString("Application_Type")%></td>
+
+			<td><%=resultSet.getString("Total_Appln_Received")%></td>
+
+			<td><%=resultSet.getString("Appln_no_30d")%></td>
+
+			<td><%=resultSet.getString("Appln_per_30d")%>%</td>
+
+			<td><%=resultSet.getString("Appln_no_31_45d")%></td>
+
+			<td><%=resultSet.getString("Appln_per_31_45d")%>%</td>
+
+			<td><%=resultSet.getString("Appln_no_beyond45d")%></td>
+
+			<td><%=resultSet.getString("Appln_per_beyond45d")%></td>
+
+			<td><%=resultSet.getString("Pending_Appln_no")%></td>
+
+			<td><%=resultSet.getString("Pending_Appln_per")%></td>
+
+			<td><%=resultSet.getString("Pending_Appln_no_gt45d")%></td>
+
+			<td><%=resultSet.getString("Pending_Appln_per_gt45d")%></td>
+
+			</tr>
+			<%
+				}
+
+				} catch (Exception e) {
+					connection.close();
+					e.printStackTrace();
+				}
+			%>
+
+	</tbody>		
+</table>
+						</tr>
+
+					</table>
 			</tr>
 		</tbody>
 	</table>
@@ -274,13 +315,8 @@
 		</td>
 	</tr>
 	<!--footer_bottom end-->
-
-
-
 	</tbody>
 	</table>
-
-
 </body>
 
 </html>

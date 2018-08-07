@@ -77,7 +77,7 @@ public class AddUser extends HttpServlet {
 	
 	public void getUser(String user)
 	{
-		String sqlQuery = "Select * from hspcb.USER_INFO where EmailId =" + user;
+		String sqlQuery = "Select * from hspcb.USER_INFO where EmployeeId =" + user;
 
 		try {
 			UserProfile profile =null;

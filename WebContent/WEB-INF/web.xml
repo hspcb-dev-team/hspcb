@@ -26,7 +26,7 @@
   <servlet>
     <display-name>addUser</display-name>
     <servlet-name>addUser</servlet-name>
-    <servlet-class>org.hspcb.servlets.addUser</servlet-class>
+    <servlet-class>org.hspcb.servlets.AddUser</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>

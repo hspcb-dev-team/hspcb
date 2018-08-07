@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			request.setAttribute("consentList", consentList);
-			request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
+			request.getRequestDispatcher("welcome.jsp").forward(request, response);
 			
 			out.print("Welcome " + id);
 		} else {
