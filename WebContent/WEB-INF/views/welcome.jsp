@@ -5,6 +5,10 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="org.hspcb.bean.ConsentData"%>
+ <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %> 
 <head>
 <style type='text/css'>
 @import url(/OCMMS/plugins/calendar-1.2.0-SNAPSHOT3/css/aqua.css);
@@ -290,7 +294,7 @@
 		Statement statement = connection.createStatement();
 		String sql = "select * from hspcb.PerformanceReport";
 		ResultSet resultSet = statement.executeQuery(sql);
-	%>
+	%> 
 	<table border="1">
 		<tr bgcolor="#CCFFCC">
 			<!-- 			<td align="center" class="headngblue" rowspan="2">Region Name</td> -->
@@ -324,9 +328,60 @@
 		</tr>
 
 
+<!-- 		<tr class="odd"> -->
+<!-- 			<td align="center" class="headngblue" rowspan="5"><td>Bahadurgarh</td> -->
+<!-- 			</td> -->
+			<%-- <tr>
+			<c:forEach items="${consentList}" var="item">
+     <td>  ${item}</td><br>
+</c:forEach> --%>
+			
+			</tr>
+			<%-- <% List<ConsentData> consentData = (ArrayList<ConsentData>)request.getAttribute("consentList");
+ 
+    for(ConsentData consentData1 : consentData)
+    {  %>
+       <td><%= consentData1.getApplication_Type()%></td>
+
+			<td><%=consentData1.getTotal_Appln_Received()%></td>
+
+			<td><%=consentData1.getAppln_no_30d()%></td>
+
+			<td><%=consentData1.getAppln_per_30d()%>%</td>
+
+			<td><%=consentData1.getAppln_no_31_45d()%></td>
+
+			<td><%=consentData1.getAppln_per_31_45d()%></td>
+
+			<td><%=consentData1.getAppln_no_beyond45d()%></td>
+
+			<td><%=consentData1.getAppln_per_beyond45d()%></td>
+
+			<td><%=consentData1.getPending_Appln_no()%></td>
+
+			<td><%=consentData1.getPending_Appln_per()%></td>
+
+			<td><%=consentData1.getPending_Appln_no_gt45d()%></td>
+
+			<td><%=consentData1.getPending_Appln_per_gt45d()%></td>
+    	
+        
+ <% } %> --%>
+
+			
+			
+			<%-- 
+				<%
+					try {
+						while (resultSet.next()) {
+				%>
+            
+			<td><%=resultSet.getString("Application_Type")%></td> --%>
+
 		<!-- 		<tr class="odd"> -->
 		<!-- 			<td align="center" class="headngblue" rowspan="5"><td>Bahadurgarh</td> -->
 		<!-- 			</td> -->
+
 
 		<%
 			try {
@@ -366,7 +421,10 @@
 				connection.close();
 				e.printStackTrace();
 			}
-		%>
+
+		%> 
+ </table> 
+
 	</table>
 									<!--</div>
 									
@@ -439,6 +497,7 @@
 
 	</tbody>
 	</table>
+
 
 
 
