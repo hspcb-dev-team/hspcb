@@ -7,7 +7,7 @@
 <title>Add User Information</title>
 </head>
 <body>
-<form action="AddUser" method="post" >
+<form action="addUser" method="post" >
 		<table border="1" align="left" style="table-layout: auto;">
 		<tr><td align="center">
 		Add New User</td>

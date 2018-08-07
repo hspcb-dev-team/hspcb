@@ -14,14 +14,19 @@
     <servlet-class>org.hspcb.servlets.SROData</servlet-class>
   </servlet>
   <servlet>
-  <display-name>forgotPassword</display-name>
+    <display-name>forgotPassword</display-name>
     <servlet-name>forgotPassword</servlet-name>
     <servlet-class>org.hspcb.servlets.forgotPassword</servlet-class>
   </servlet>
   <servlet>
-  <display-name>changePassword</display-name>
+    <display-name>changePassword</display-name>
     <servlet-name>changePassword</servlet-name>
     <servlet-class>org.hspcb.servlets.changePassword</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>addUser</display-name>
+    <servlet-name>addUser</servlet-name>
+    <servlet-class>org.hspcb.servlets.addUser</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
@@ -39,4 +44,9 @@
     <servlet-name>changePassword</servlet-name>
     <url-pattern>/changePassword</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addUser</servlet-name>
+    <url-pattern>/addUser</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
