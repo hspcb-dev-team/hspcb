@@ -5,14 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Haryana State Pollution Control Board</title>
-<link href="css/CSS_Home/custom.css" rel="stylesheet" />
-<link href="css/CSS_Home/bootstrap.min.css" rel="stylesheet" />
-<link href="css/CSS_Home/font-awesome.css" rel="stylesheet" />
-<link href="css/CSS_Home/portal.css" rel="stylesheet" />
-<link href="css/CSS_Home/skin.css" rel="stylesheet" />
-<link href="css/CSS_Home/style.css" rel="stylesheet" />
-<link href="css/CSS_Home/fontasom.css" rel="stylesheet" />
-<link href="css/CSS_Home/site-footer.css" rel="stylesheet" />
+<!-- <link href="css/CSS_Home/custom.css" rel="stylesheet" /> -->
+<!-- <link href="css/CSS_Home/bootstrap.min.css" rel="stylesheet" /> -->
+<!-- <link href="css/CSS_Home/font-awesome.css" rel="stylesheet" /> -->
+<!-- <link href="css/CSS_Home/portal.css" rel="stylesheet" /> -->
+<!-- <link href="css/CSS_Home/skin.css" rel="stylesheet" /> -->
+<!-- <link href="css/CSS_Home/style.css" rel="stylesheet" /> -->
+<!-- <link href="css/CSS_Home/fontasom.css" rel="stylesheet" /> -->
+<!-- <link href="css/CSS_Home/site-footer.css" rel="stylesheet" /> -->
 <script src="js/jquery-2.1.1.min.js"></script>
 
 <script src="js/bootstrap.min.js"></script>
@@ -273,7 +273,7 @@ body {
 }
 </style>
 
-<body>
+<body background="">
 
 	<style>
 	
@@ -434,30 +434,30 @@ text-decoration:none;
 	right: 0;
 }
 </style>
-	<form method="post" action="LoginServlet" language="javascript">
-		<div class="aspNetHidden">
-			<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
-			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-			<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT"
-				value="" /> <input type="hidden" name="__VIEWSTATE"
-				id="__VIEWSTATE"
-				value="FtrEqPWvR2qNLspYwdRCELcaWiBxKsYGys6zLDrsUIN2sCyhjBAw07NlgtC+j+Kjp9umwp++hMYjKa+xBZv6sqxGuOCRnd0Y4hKFM4D3dm69eUOFR//Od59LDmJmVZEg8o7VpfWNbTJfZqdF1xJyPlHdjJOMueq3QzvgbGk2J33r37akXETcwaJWJT4kruhGAzqW1NaSrltAmvGbj5j+OmeWVuLWNuTfpdALVw==" />
-		</div>
+	<form method="post" action="LoginServlet" language="javascript" style="position:right;">
+<!-- 		<div class="aspNetHidden"> -->
+<!-- 			<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" /> -->
+<!-- 			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" /> -->
+<!-- 			<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" -->
+<!-- 				value="" /> <input type="hidden" name="__VIEWSTATE" -->
+<!-- 				id="__VIEWSTATE" -->
+<!-- 				value="FtrEqPWvR2qNLspYwdRCELcaWiBxKsYGys6zLDrsUIN2sCyhjBAw07NlgtC+j+Kjp9umwp++hMYjKa+xBZv6sqxGuOCRnd0Y4hKFM4D3dm69eUOFR//Od59LDmJmVZEg8o7VpfWNbTJfZqdF1xJyPlHdjJOMueq3QzvgbGk2J33r37akXETcwaJWJT4kruhGAzqW1NaSrltAmvGbj5j+OmeWVuLWNuTfpdALVw==" /> -->
+<!-- 		</div> -->
 
 
-		<div class="sidebar-second" style="width: 35%;">
+		<div  style="width: 45%; align-items: stretch;">
 			<div class="soft">
 				<h2 tabindex="0">
 					<span id="dnn_ctr6335_dnnTITLE_titleLabel11" class="TitleH2">HSPCB
 						Application Login</span>
 				</h2>
 
-				<div class="col-md-4 col-md-offset-7">
+				<div class="col-md-4 col-md-offset-7" >
 					<div class="panel panel-default">
 						<div class="flip">
 							<div class="panel-body">
 								<div class="form-group">
-									<h2 style="background: transparent">
+									<h2 style="background:transparent;">
 										<span id="Label3" style="color: black;">User ID : </span>
 									</h2>
 									<div class="col-sm-9">
@@ -480,7 +480,7 @@ text-decoration:none;
 									</div>
 								</div>
 								<div class="form-group">
-									<h2 style="background: transparent">
+									<h2 style="background: transparent;">
 										<span id="Label5">Password : </span>
 									</h2>
 									<div class="col-sm-9">
@@ -571,7 +571,7 @@ text-decoration:none;
 									<div class="scrollup"></div>
 									<p>This website belongs to Haryana State Pollution Control
 										Board, Government Of Haryana, India</p>
-									<p>Sandeep Sharma (Mob. 9216849317)</p>
+<!-- 									<p>Sandeep Sharma (Mob. 9216849317)</p> -->
 								</div>
 							</div>
 
