@@ -9,13 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.hspcb.bean.UserData;
+import org.hspcb.bean.ConsentData;
+
 import org.hspcb.controller.Service;
 
 
 public class SROData extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	UserData userData=null;
+	ConsentData userData=null;
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
