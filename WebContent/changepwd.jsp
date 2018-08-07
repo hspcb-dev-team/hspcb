@@ -25,26 +25,26 @@
 				 <tbody><tr bgcolor="#F4F7FB">
                             
 								<td width="40%" align="right" bgcolor="#A8DAF3" class="headngblue">Username *: </td>
-                            <td width="60%" align="left" bgcolor="#E8F6F9" style="color:black" class="txt style6">  <input name="id" type="text" class="txt4" value=""></td>
+                            <td width="60%" align="left" bgcolor="#E8F6F9" style="color:black" class="txt style6">  <input name="uid_change" type="text" class="txt4" value=""></td>
                           </tr>
                          
                           <tr align="center" bgcolor="#F4F7FB">
                             <td align="right" valign="middle" bgcolor="#A8DAF3" class="headngblue">Old Password*:</td>
-                            <td align="left" bgcolor="#E8F6F9" class="txt"><input maxlength="25" name="old" type="password" id="old" class="txt4">
+                            <td align="left" bgcolor="#E8F6F9" class="txt"><input maxlength="25" name="old_change" type="password" id="old" class="txt4">
                             <span class="txt4">(enter old password)</span></td>
                           </tr>
                          
                           <tr bgcolor="#F4F7FB">
                             <td align="right" bgcolor="#A8DAF3" class="headngblue">Enter New Password *: </td>
                             <td align="left" bgcolor="#E8F6F9" class="txt style6">
-                            <input name="newPass1" id="newPass1" type="password" class="txt4">
+                            <input name="newPass1_change" id="newPass1" type="password" class="txt4">
                             <span class="txt4">(enter new password)</span></td>
                           </tr>
                           
                           <tr bgcolor="#F4F7FB">
                             <td align="right" bgcolor="#A8DAF3" class="headngblue"> Re-type New Password*: </td>
                             <td align="left" bgcolor="#E8F6F9" class="txt style6">
-                            <input name="newPass2" id="newPass2" type="password" onblur="setChangePass()" class="txt4">
+                            <input name="newPass2_change" id="newPass2" type="password" onblur="setChangePass()" class="txt4">
                             <span class="txt4">(re-enter password)</span></td>
                           </tr>
                           <tr>

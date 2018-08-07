@@ -18,6 +18,7 @@ import javax.servlet.http.HttpSession;
 import org.hspcb.bean.UserProfile;
 import org.hspcb.dao.ConnectMYSQLServer;
 
+
 public class AddUser extends HttpServlet {
 
 	@Override
@@ -27,9 +28,7 @@ public class AddUser extends HttpServlet {
 		HttpSession session = req.getSession();
 		String user = (String) session.getAttribute("uname");
 //		user = user.split(arg0, arg1)
-		
 		getUser(user);		
-		req.getRequestDispatcher("/WEB-INF/views/adduser.jsp").forward(req, resp);
 	}
 
 	public void addUser(UserProfile userProfile) throws SQLException {
@@ -89,7 +88,7 @@ public class AddUser extends HttpServlet {
 			ResultSet rs = statement.executeQuery(sqlQuery);
 			// Date date = new Date();
 			// SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-			if(rs.next()) {
+			
 			while (rs.next()) {
 				profile = new UserProfile();
 //				Integer id = rs.getInt("Id");
@@ -118,16 +117,15 @@ public class AddUser extends HttpServlet {
 				profile.setEmailId(rs.getString("EmailId"));
 				profile.setLastUpdated(rs.getDate("LastUpdated"));
 				profile.setUserRole(rs.getString("UserRole"));
+				addUser(profile);
 //				out.println("Id: " + id + "fname: " + fname + "lname: " + lname + "createdBy: " + createdBy
 //						+ "employeeId: " + employeeId + "designation: " + designation + "department: " + department
 //						+ "status: " + status + "mobileNo: " + mobileNo + "contactNo: " + contactNo + "emailId: "
 //						+ emailId + "lastUpdated: " + lastUpdated + "userRole: " + userRole);
 			System.out.println("Profile Data has been set.");
 			}
-			}
-			else {
-				addUser(profile);
-			}
+			
+			
 		}
 
 		catch (Exception e) {
