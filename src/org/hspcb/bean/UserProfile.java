@@ -1,6 +1,6 @@
 package org.hspcb.bean;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class UserProfile {
 
@@ -11,9 +11,7 @@ public class UserProfile {
 	private String employeeId;
 	private String designation;
 	private String department;
-	private String status;
-	private String mobileNo;
-	private String contactNo;
+	private String mobileNo;	
 	private String emailId;
 	private Date lastUpdated;
 	private String userRole;
@@ -60,23 +58,12 @@ public class UserProfile {
 	public void setDepartment(String department) {
 		this.department = department;
 	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
+	
 	public String getMobileNo() {
 		return mobileNo;
 	}
 	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
-	}
-	public String getContactNo() {
-		return contactNo;
-	}
-	public void setContactNo(String contactNo) {
-		this.contactNo = contactNo;
 	}
 	public String getEmailId() {
 		return emailId;

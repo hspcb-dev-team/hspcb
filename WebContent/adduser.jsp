@@ -51,7 +51,7 @@
 </head>
 
 <body>
-
+<form action="addUser" method="post">
 	<table width="100%" cellspacing="0" cellpadding="0" border="0"
 		align="center">
 		<tbody>
@@ -68,7 +68,7 @@
 												<td width="100%"><img
 													src="/WEB-INF/images/header1.JPG"
 													alt="Haryana State Pollution Control Board" width="100%"
-													height="91"></td>
+													height="91" style="height: 76px; "></td>
 <!-- 											</tr> -->
 <!-- 										</tbody> -->
 <!-- 									</table> -->
@@ -271,7 +271,7 @@
 	</tbody>
 	</table>
 
-
+</form>
 </body>
 
 </html>
