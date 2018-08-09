@@ -48,7 +48,6 @@ public class AddUser extends HttpServlet {
 	public void addUser(String user, HttpServletRequest req, HttpServletResponse resp) throws SQLException {
 		UserProfile userProfile =null;
 				
-		
 		try {
 			int idCount = 0;
 			System.out.println("Getting DB Connection <--> user profile");
@@ -97,6 +96,7 @@ public class AddUser extends HttpServlet {
 			pstatement.setString(11, "2");
 			
 			int queryStatus = pstatement.executeUpdate();
+			System.out.println("Query status add user " + queryStatus);
 			
 		} catch (Exception e) {
 			// TODO: handle exception

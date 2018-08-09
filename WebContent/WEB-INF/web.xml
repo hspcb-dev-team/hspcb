@@ -28,6 +28,12 @@
     <servlet-name>addUser</servlet-name>
     <servlet-class>org.hspcb.servlets.AddUser</servlet-class>
   </servlet>
+  <servlet>
+    <display-name>fetchData</display-name>
+    <servlet-name>fetchData</servlet-name>
+    <servlet-class>org.hspcb.servlets.FetchData</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/</url-pattern>
@@ -48,5 +54,8 @@
     <servlet-name>addUser</servlet-name>
     <url-pattern>/addUser</url-pattern>
   </servlet-mapping>
-  
+  <servlet-mapping>
+    <servlet-name>fetchData</servlet-name>
+    <url-pattern>/fetchData</url-pattern>
+  </servlet-mapping>
 </web-app>
