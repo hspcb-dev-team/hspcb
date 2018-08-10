@@ -39,7 +39,7 @@ public class SROData extends HttpServlet {
 		userData.setPassword(request.getParameter("cte_grntd"));
 		userData.setPassword(request.getParameter("cte_rjctd"));*/
 		
-	    Service service=new Service();
+	    Service service	=	new Service();
 	    //	service.addUserDts(userData);
 		request.getRequestDispatcher("/WEB-INF/views/SROData.jsp").forward(request, response);
 

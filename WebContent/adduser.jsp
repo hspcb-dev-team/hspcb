@@ -170,38 +170,38 @@
 						</tbody>
 					</table><br/></td>
 				<td>
-				<h2 align="center"><p>Add New User</p></h2>
+				<h2 align="center" style="height: 43px; "><p>Add New User</p></h2>
 				<table border="1" align="center" width="100%" >
 				<tbody align="center" >
 					
 			<tr>
-				<td width="50%">First Name:</td>
+				<td width="50%">First Name*:</td>
 				<td width="50%"> <input type="text" name="fname" size="35" /></td>
 			</tr>
 			
 			<tr>
-				<td width="50%">Last Name:</td>
+				<td width="50%">Last Name*:</td>
 				<td width="50%"><input type="text" name="lname" size="35" /></td>
 			</tr>
 			
 			<tr>
-				<td width="50%">Employee ID:</td>
+				<td width="50%">Employee ID*:</td>
 				<td width="50%"><input type="text" name="empid" size="35" /></td>
 			</tr>
 			<tr>
-				<td width="50%">Designation:</td>
+				<td width="50%">Designation*:</td>
 				<td width="50%"><input type="text" name="designation" size="35" /></td>
 			</tr>
 			<tr>
-				<td width="50%">Region / Branch :</td>
+				<td width="50%">Region / Branch*:</td>
 				<td width="50%"><input type="text" name="location" size="35" /></td>
 			</tr>
 			<tr>
-				<td width="50%">Email ID:</td>
+				<td width="50%">Email ID*:</td>
 				<td width="50%"><input type="text" name="emailid" size="35" /></td>
 			</tr>
 			<tr>
-				<td width="50%">Mobile No:</td>
+				<td width="50%">Mobile No*:</td>
 				<td width="50%"><input type="text" name="mobileno" size="35" /></td>
 			</tr>
 			<tr>

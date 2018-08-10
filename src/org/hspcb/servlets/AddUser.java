@@ -33,9 +33,9 @@ public class AddUser extends HttpServlet {
 //		getUser(user);
 		try {
 			System.out.println("Adding user");
-		addUser(user,req,resp);
-		out.println("User added successfully");
-		System.out.println("User added successfully");
+		Boolean userStatus = addUser(user,req,resp);
+		if(userStatus) {out.println("User added successfully");
+		System.out.println("User added successfully");}
 		req.getRequestDispatcher("adduser.jsp").include(req, resp);
 		}
 		
@@ -45,10 +45,22 @@ public class AddUser extends HttpServlet {
 		}
 	}
 
-	public void addUser(String user, HttpServletRequest req, HttpServletResponse resp) throws SQLException {
+	public boolean addUser(String user, HttpServletRequest req, HttpServletResponse resp) throws SQLException {
+		Boolean checkStatus = false;
 		UserProfile userProfile =null;
-				
 		try {
+		PrintWriter out = resp.getWriter();		
+		String fname = req.getParameter("fname");
+		String lname = req.getParameter("lname");
+		String employeeId = req.getParameter("empid");
+		String designation = req.getParameter("designation");
+		String department = req.getParameter("location");
+		String mobileNo = req.getParameter("mobileno");
+		String emailId = req.getParameter("emailid");
+		
+		if( !fname.equals("") && !lname.equals("") && !employeeId.equals("") && !designation.equals("") && !department.equals("") && !mobileNo.equals("")) 		
+		{
+			
 			int idCount = 0;
 			System.out.println("Getting DB Connection <--> user profile");
 			ConnectMYSQLServer connectMYSQLServer = new ConnectMYSQLServer();
@@ -65,44 +77,39 @@ public class AddUser extends HttpServlet {
 			query = "INSERT INTO hspcb.USER_INFO values (?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement pstatement = connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
 			System.out.println("1" + query);
-
-//			Integer id = userProfile.getUpId();
-//			String fname = userProfile.getFirstName();
-//			String lname = userProfile.getLastName();
-//			String createdBy = userProfile.getCreatedBy();
-//			String employeeId = userProfile.getEmployeeId();
-//			String designation = userProfile.getDesignation();
-//			String department = userProfile.getDepartment();
-//			String status = userProfile.getStatus();
-//			String mobileNo = userProfile.getMobileNo();
-//			String emailId = userProfile.getEmailId();
-//			Date lastUpdated = userProfile.getLastUpdated();
-//			String userRole = userProfile.getUserRole();
-
+		
 			  Date dNow = new Date();
 		      SimpleDateFormat ft =  new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss");
 		     	String date = ft.format(dNow);
 		      System.out.println("Current Date: " + date);
 			
 			pstatement.setInt(1, idCount);
-			pstatement.setString(2, req.getParameter("fname"));
-			pstatement.setString(3, req.getParameter("lname"));
+			pstatement.setString(2, fname);
+			pstatement.setString(3, lname);
 			pstatement.setString(4, user);
-			pstatement.setString(5, req.getParameter("empid"));
-			pstatement.setString(6, req.getParameter("designation"));
-			pstatement.setString(7, req.getParameter("location"));			
-			pstatement.setString(8, req.getParameter("mobileno"));
-			pstatement.setString(9, req.getParameter("emailid"));
+			pstatement.setString(5, employeeId);
+			pstatement.setString(6, designation);
+			pstatement.setString(7, department);			
+			pstatement.setString(8, mobileNo);
+			pstatement.setString(9, emailId);
 			pstatement.setString(10, date);
 			pstatement.setString(11, "2");
 			
 			int queryStatus = pstatement.executeUpdate();
 			System.out.println("Query status add user " + queryStatus);
-			
+			if(queryStatus == 1)
+				checkStatus=true;
+		}
+		else
+		{
+			out.println("Please fill all the details before submitting.");
+			System.out.println("Please fill the data. ");
+		}
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e.getMessage());
 		}
+		return checkStatus;
 	}
 	
 	public void getUser(String user)
@@ -145,11 +152,7 @@ public class AddUser extends HttpServlet {
 				profile.setEmailId(rs.getString("EmailId"));
 				profile.setLastUpdated(rs.getDate("LastUpdated"));
 				profile.setUserRole(rs.getString("UserRole"));
-//				addUser(profile);
-//				out.println("Id: " + id + "fname: " + fname + "lname: " + lname + "createdBy: " + createdBy
-//						+ "employeeId: " + employeeId + "designation: " + designation + "department: " + department
-//						+ "status: " + status + "mobileNo: " + mobileNo + "contactNo: " + contactNo + "emailId: "
-//						+ emailId + "lastUpdated: " + lastUpdated + "userRole: " + userRole);
+
 			System.out.println("Profile Data has been set.");
 			}
 			
