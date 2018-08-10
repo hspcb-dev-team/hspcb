@@ -65,6 +65,7 @@ public class AddUser extends HttpServlet {
 			query = "INSERT INTO hspcb.USER_INFO values (?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement pstatement = connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
 			System.out.println("1" + query);
+
 //			Integer id = userProfile.getUpId();
 //			String fname = userProfile.getFirstName();
 //			String lname = userProfile.getLastName();

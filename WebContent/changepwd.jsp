@@ -51,7 +51,7 @@
 </head>
 
 <body>
-
+<form action="changePassword" method="post">
 	<table width="100%" cellspacing="0" cellpadding="0" border="0"
 		align="center">
 		<tbody>
@@ -279,7 +279,7 @@
 
 	</tbody>
 	</table>
-
+</form>
 
 </body>
 
