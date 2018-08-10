@@ -6,7 +6,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="java.util.List"%>
+<%@page import="java.util.*"%>
 <%@page import="org.hspcb.bean.ConsentData"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
@@ -66,7 +66,7 @@
 								<!-- 										<tbody> -->
 								<!-- 											<tr> -->
 								<td width="100%" valign="top" align="left"><img
-									src="header1.JPG" alt="Haryana State Pollution Control Board"
+									src="images/header1.JPG" alt="Haryana State Pollution Control Board"
 									width="100%"></td>
 								<!-- 											</tr> -->
 								<!-- 										</tbody> -->
@@ -146,7 +146,7 @@
 												%>
 												<td>Welcome <%=user%> (employee)
 												</td>
-												<td class="top-lnks" align="right">Date :&nbsp;6/8/2018</td>
+												<td class="top-lnks" align="right">Date <%= (new java.util.Date().toLocaleString()) %></td>
 											</tr>
 										</tbody>
 									</table>

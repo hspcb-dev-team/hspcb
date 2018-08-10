@@ -146,7 +146,7 @@
 												%>
 												<td>Welcome <%=user%> (employee)
 												</td>
-												<td class="top-lnks" align="right">Date :&nbsp;6/8/2018</td>
+												<td class="top-lnks" align="right">Date :<%= (new java.util.Date().toLocaleString()) %></td>
 											</tr>
 										</tbody>
 									</table>

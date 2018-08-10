@@ -1,7 +1,7 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.*"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
@@ -198,7 +198,6 @@
                                                     <td align="left" >
                                                         <select name="applicationType" id="applicationType" >
 <option value="All" >All</option>
-<option value="Total" >Total</option>
 <option value="CTO" >CTO</option>
 <option value="Total" >Performance Weightage</option>
 </select>
@@ -221,7 +220,120 @@
 				 </form> 
 				
 				
-			
+				
+				<table align="center" width="100%" cellpadding="0" cellspacing="0"
+						class="tab-txt">
+						<tr>
+							<td colspan="9" align="center"><span class="headngblue"><h4 align="center">Performance
+										report of regional officers on the basis of Application
+										Disposal of CTE/CTO/HWM/BMW/E-Waste/Plastic Waste</h4> </span></td>
+								<%
+ 	String driver = "com.mysql.jdbc.Driver";
+ 	String connectionUrl = "jdbc:mysql://localhost:3306/";
+ 	String database = "hspcb";
+ 	String userid = "root";
+ 	String password = "Admin@1234";
+ 	String branch=request.getParameter("regionName");
+ 	String appType=request.getParameter("applicationType");
+ 	try {
+ 		Class.forName(driver);
+ 	} catch (ClassNotFoundException e) {
+ 		e.printStackTrace();
+ 	}
+ 	Connection connection = DriverManager.getConnection(connectionUrl + database, userid, password);
+ 	String sql = "select * from hspcb.PerformanceReport where branch_region=? and application_type=? ";
+ 	PreparedStatement statement = connection.prepareStatement(sql);
+ 	statement.setString(1, branch);
+ 	statement.setString(2, appType);
+	ResultSet resultSet = statement.executeQuery();
+ 	
+ 	
+ 	
+ 	//where branch_region=? and application_type=?
+ 	/* ResultSet resultSet = statement.executeQuery(sql); */
+ %>
+<table border="1">
+<tbody>
+			<tr bgcolor="#CCFFCC">
+				<!-- 			<td align="center" class="headngblue" rowspan="2">Region Name</td> -->
+				<td align="center" class="headngblue" rowspan="2">Region</td>
+				<td align="center" class="headngblue" rowspan="2">Application
+					type</td>
+				<td align="center" class="headngblue" rowspan="2">Total
+					applications received</td>
+				<td align="center" class="headngblue" colspan="2">Applications
+					decided within 30 days</td>
+				<td align="center" class="headngblue" colspan="2">Applications
+					decided within 31-45 days</td>
+				<td align="center" class="headngblue" colspan="2">Applications
+					decided beyond 45 days</td>
+				<td align="center" class="headngblue" colspan="2">Pending
+					Applications</td>
+				<td align="center" class="headngblue" colspan="2">Pending
+					Application more than 45 days</td>
+
+			</tr>
+			<tr bgcolor="#CCFFCC">
+				<td align="center" class="headngblue">Number</td>
+				<td align="center" class="headngblue">Percentage</td>
+				<td align="center" class="headngblue">Number</td>
+				<td align="center" class="headngblue">Percentage</td>
+				<td align="center" class="headngblue">Number</td>
+				<td align="center" class="headngblue">Percentage</td>
+				<td align="center" class="headngblue">Number</td>
+				<td align="center" class="headngblue">Percentage</td>
+				<td align="center" class="headngblue">Number</td>
+				<td align="center" class="headngblue">Percentage</td>
+			</tr>
+<tr>
+<%
+				try {
+					while (resultSet.next()) {
+			%>
+			<td><%=resultSet.getString("branch_region")%></td>
+			<td><%=resultSet.getString("Application_Type")%></td>
+
+			<td><%=resultSet.getString("Total_Appln_Received")%></td>
+
+			<td><%=resultSet.getString("Appln_no_30d")%></td>
+
+			<td><%=resultSet.getString("Appln_per_30d")%>%</td>
+
+			<td><%=resultSet.getString("Appln_no_31_45d")%></td>
+
+			<td><%=resultSet.getString("Appln_per_31_45d")%>%</td>
+
+			<td><%=resultSet.getString("Appln_no_beyond45d")%></td>
+
+			<td><%=resultSet.getString("Appln_per_beyond45d")%></td>
+
+			<td><%=resultSet.getString("Pending_Appln_no")%></td>
+
+			<td><%=resultSet.getString("Pending_Appln_per")%></td>
+
+			<td><%=resultSet.getString("Pending_Appln_no_gt45d")%></td>
+
+			<td><%=resultSet.getString("Pending_Appln_per_gt45d")%></td>
+
+			</tr>
+			<%
+				}
+
+				} catch (Exception e) {
+					connection.close();
+					e.printStackTrace();
+				}
+			%>
+
+	</tbody>		
+</table>
+						</tr>
+
+					</table>
+			</tr>
+		</tbody>
+	</table>
+
 
 	<style type="text/css">
 
