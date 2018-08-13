@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import javax.swing.text.PlainDocument;
 
 import org.hspcb.controller.Service;
+import org.hspcb.controller.ValidationPolicy;
 
 /**
  * Servlet implementation class forgotPassword
@@ -42,30 +43,30 @@ public class changePassword extends HttpServlet {
 				if( !newPwd.equals("") && !newPwd2.equals("") && !newPwd.equalsIgnoreCase("null") && !newPwd2.equalsIgnoreCase("null")) {
 				if (newPwd.equalsIgnoreCase(newPwd2)) { 
 					if (Service.updatePwd(id, newPwd2)) {
-						out.println("Your password has been updated.");
+						ValidationPolicy.setInfoMsg("Your password has been updated.");
 						request.getRequestDispatcher("changepwd.jsp").include(request, response);
 						// request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request,
 						// response);
 					} else {
 						// String final_resp ="<html><head><body><h1><font color:red>User/Password does
 						// not match!!!</font></h1></body></head></html>";
-						out.print("There is a problem with changing of password, please try again !!");
+						ValidationPolicy.setErrorMsg("There is a problem with changing of password, please try again !!");
 						request.getRequestDispatcher("changepwd.jsp").include(request, response);
 					}
 				
 				} else {
-					out.print("The New password and confirm password does not match.");
+					ValidationPolicy.setErrorMsg("The New password and confirm password does not match.");
 					request.getRequestDispatcher("changepwd.jsp").include(request, response);
 				}
 				} else
 				{
-					out.print("New password and confirmation password should not be empty !!");
+					ValidationPolicy.setErrorMsg("New password and confirmation password should not be empty !!");
 					request.getRequestDispatcher("changepwd.jsp").include(request, response);
 				}
 			} else {
 				// String final_resp ="<html><head><body><h1><font color:red>User/Password does
 				// not match!!!</font></h1></body></head></html>";
-				out.print("User Name and old password does not match.");
+				ValidationPolicy.setErrorMsg("User Name and old password does not match.");
 				request.getRequestDispatcher("changepwd.jsp").include(request, response);
 			}
 			out.close();

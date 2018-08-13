@@ -449,16 +449,16 @@ text-decoration:none;
 			<div class="soft">
 				<h2 tabindex="0">
 					<span id="dnn_ctr6335_dnnTITLE_titleLabel11" class="TitleH2">HSPCB
-						Application Login</span>
+						Login</span>
 				</h2>
 
 				<div class="col-md-4 col-md-offset-7" >
-					<div class="panel panel-default">
-						<div class="flip">
+					<div class="panel panel-default" style="width: 422px; ">
+						<div class="flip" style="width: 424px; height: 429px">
 							<div class="panel-body">
 								<div class="form-group">
 									<h2 style="background:transparent;">
-										<span id="Label3" style="color: black;">User ID : </span>
+										<span id="Label3" >User ID : </span>
 									</h2>
 									<div class="col-sm-9">
 										<input name="_ctl0:ContentPlaceHolder1:txtuserid"
@@ -525,7 +525,7 @@ text-decoration:none;
 <!-- 									</div> -->
 <!-- 								</div> -->
 
-								<div class="form-group" style="text-align: center;">
+								<div class="form-group" style="text-align: center; height: 94px">
 									<div class="col-sm-offset-3 col-sm-9">
 										<div class="watermark">
 											<input type="submit"
@@ -539,7 +539,7 @@ text-decoration:none;
 									</div>
 								</div>
 								<div class="form-group" style="text-align: center;">
-									<div class="col-sm-offset-3 col-sm-9">
+									<div class="col-sm-offset-3 col-sm-9" style="height: 32px; ">
 										<strong><span style="">Office Login for
 												Regional Officer and Sub Regional Officer</span></strong>
 									</div>

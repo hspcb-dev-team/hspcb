@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import javax.swing.text.PlainDocument;
 
 import org.hspcb.controller.Service;
+import org.hspcb.controller.ValidationPolicy;
 
 /**
  * Servlet implementation class forgotPassword
@@ -41,20 +42,21 @@ public class forgotPassword extends HttpServlet {
 				&& !newPwd2.equalsIgnoreCase("null")) {
 			if (newPwd.equalsIgnoreCase(newPwd2)) {
 				if (Service.updatePwd(id, newPwd2)) {
-					out.println("Your password has been updated.");
+//					out.println("Your password has been updated.");
+					ValidationPolicy.setInfoMsg("Your password has been updated.");
 					request.getRequestDispatcher("forgotpwd.jsp").include(request, response);
 				} else {
 					// String final_resp ="<html><head><body><h1><font color:red>User/Password does
 					// not match!!!</font></h1></body></head></html>";
-					out.print("There is a problem with updating of password.");
+					ValidationPolicy.setErrorMsg("There is a problem with updating of password.");
 					request.getRequestDispatcher("forgotpwd.jsp").include(request, response);
 				}
 			} else {
-				out.print("The New password and confirm password does not match.");
+				ValidationPolicy.setErrorMsg("The New password and confirm password does not match.");
 				request.getRequestDispatcher("forgotpwd.jsp").include(request, response);
 			}
 		} else {
-			out.print("New password and confirmation password should not be empty !!");
+			ValidationPolicy.setErrorMsg("New password and confirmation password should not be empty !!");
 			request.getRequestDispatcher("forgotpwd.jsp").include(request, response);
 		}
 		// } else {

@@ -52,10 +52,10 @@
 
 <body>
 <form action="addUser" method="post">
-	<table width="100%" cellspacing="0" cellpadding="0" border="0"
-		align="center">
-		<tbody>
-			<tr>
+<!-- 	<table width="100%" cellspacing="0" cellpadding="0" border="0" -->
+<!-- 		align="center"> -->
+<!-- 		<tbody> -->
+<!-- 			<tr> -->
 <!-- 				<td valign="top" align="left"><table width="100%" -->
 <!-- 						cellspacing="0" cellpadding="0" border="0"> -->
 <!-- 						<tbody> -->
@@ -65,10 +65,10 @@
 <!-- 									<table width="100%" cellspacing="0" cellpadding="0" border="0"> -->
 <!-- 										<tbody> -->
 <!-- 											<tr> -->
-												<td width="100%"><img
-													src="/WEB-INF/images/header1.JPG"
-													alt="Haryana State Pollution Control Board" width="100%"
-													height="91" style="height: 76px; "></td>
+<!-- 												<td width="100%"><img -->
+<!-- 													src="/WEB-INF/images/header1.JPG" -->
+<!-- 													alt="Haryana State Pollution Control Board" width="100%" -->
+<!-- 													height="91" style="height: 76px; "></td> -->
 <!-- 											</tr> -->
 <!-- 										</tbody> -->
 <!-- 									</table> -->
@@ -76,9 +76,9 @@
 <!-- 							</tr> -->
 <!-- 						</tbody> -->
 <!-- 					</table></td> -->
-			</tr>
-		</tbody>
-	</table>
+<!-- 			</tr> -->
+<!-- 		</tbody> -->
+<!-- 	</table> -->
 		<table width="100%" cellspacing="0" cellpadding="0" border="1">
 
 		<tbody>

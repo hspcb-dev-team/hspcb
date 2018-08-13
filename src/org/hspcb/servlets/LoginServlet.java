@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import org.hspcb.bean.ConsentData;
 import org.hspcb.controller.Service;
+import org.hspcb.controller.ValidationPolicy;
 import org.hspcb.data.ExcelData;
 
 public class LoginServlet extends HttpServlet {
@@ -44,10 +45,11 @@ public class LoginServlet extends HttpServlet {
 			request.setAttribute("consentList", consentList);
 			request.getRequestDispatcher("welcome.jsp").forward(request, response);
 			
-			out.print("Welcome " + id);
+//			out.print("Welcome " + id);
 		} else {
-			String final_resp ="<html><head><body><h1><font color:red>User/Password does not match!!!</font></h1></body></head></html>";
-			out.print(final_resp);			
+//			String final_resp ="<html><head><body><h1><font color:red>User/Password does not match!!!</font></h1></body></head></html>";
+//			out.print(final_resp);			
+			ValidationPolicy.setErrorMsg("User/Password does not match!!!");
 			request.getRequestDispatcher("index.jsp").include(request, response);
 		}
 

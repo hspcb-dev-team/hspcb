@@ -52,33 +52,33 @@
 
 <body>
 
-	<table width="100%" cellspacing="0" cellpadding="0" border="0"
-		align="center">
-		<tbody>
-			<tr>
-				<td valign="top" align="left"><table width="100%"
-						cellspacing="0" cellpadding="0" border="0">
-						<tbody>
-							<tr>
+<!-- 	<table width="100%" cellspacing="0" cellpadding="0" border="0" -->
+<!-- 		align="center"> -->
+<!-- 		<tbody> -->
+<!-- 			<tr> -->
+<!-- 				<td valign="top" align="left"><table width="100%" -->
+<!-- 						cellspacing="0" cellpadding="0" border="0"> -->
+<!-- 						<tbody> -->
+<!-- 							<tr> -->
 <!-- 								<td class="bgtop" valign="top" height="91" align="left"> -->
 									<!-- code for Header  -->
 <!-- 									<table width="100%" cellspacing="0" cellpadding="0" border="0"> -->
 <!-- 										<tbody> -->
 <!-- 											<tr> -->
-												<td width="100%" valign="top" align="left"><img
-													src="/WEB-INF/images/header.png"
-													alt="Haryana State Pollution Control Board" width="1000"
-													height="91"></td>
+<!-- 												<td width="100%" valign="top" align="left"><img -->
+<!-- 													src="/WEB-INF/images/header.png" -->
+<!-- 													alt="Haryana State Pollution Control Board" width="1000" -->
+<!-- 													height="91"></td> -->
 <!-- 											</tr> -->
 <!-- 										</tbody> -->
 <!-- 									</table> -->
 <!-- 								</td> -->
-							</tr>
-						</tbody>
-					</table></td>
-			</tr>
-		</tbody>
-	</table>
+<!-- 							</tr> -->
+<!-- 						</tbody> -->
+<!-- 					</table></td> -->
+<!-- 			</tr> -->
+<!-- 		</tbody> -->
+<!-- 	</table> -->
 		<table width="100%" cellspacing="0" cellpadding="0" border="1">
 
 		<tbody>
