@@ -276,12 +276,11 @@ body {
 <body background="">
 
 	<style>
-	
-.link-g{
-color:#2d4d03;
-text-decoration:none;
-}	
-	
+.link-g {
+	color: #2d4d03;
+	text-decoration: none;
+}
+
 .form-control {
 	border-radius: 0px;
 	margin: 12px 3px;
@@ -434,200 +433,153 @@ text-decoration:none;
 	right: 0;
 }
 </style>
-	<form method="post" action="LoginServlet" language="javascript" style="position:right;">
-<!-- 		<div class="aspNetHidden"> -->
-<!-- 			<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" /> -->
-<!-- 			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" /> -->
-<!-- 			<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" -->
-<!-- 				value="" /> <input type="hidden" name="__VIEWSTATE" -->
-<!-- 				id="__VIEWSTATE" -->
-<!-- 				value="FtrEqPWvR2qNLspYwdRCELcaWiBxKsYGys6zLDrsUIN2sCyhjBAw07NlgtC+j+Kjp9umwp++hMYjKa+xBZv6sqxGuOCRnd0Y4hKFM4D3dm69eUOFR//Od59LDmJmVZEg8o7VpfWNbTJfZqdF1xJyPlHdjJOMueq3QzvgbGk2J33r37akXETcwaJWJT4kruhGAzqW1NaSrltAmvGbj5j+OmeWVuLWNuTfpdALVw==" /> -->
-<!-- 		</div> -->
+	<form method="post" action="LoginServlet" language="javascript" align="right">
+		<!-- 		<div class="aspNetHidden"> -->
+		<!-- 			<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" /> -->
+		<!-- 			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" /> -->
+		<!-- 			<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" -->
+		<!-- 				value="" /> <input type="hidden" name="__VIEWSTATE" -->
+		<!-- 				id="__VIEWSTATE" -->
+		<!-- 				value="FtrEqPWvR2qNLspYwdRCELcaWiBxKsYGys6zLDrsUIN2sCyhjBAw07NlgtC+j+Kjp9umwp++hMYjKa+xBZv6sqxGuOCRnd0Y4hKFM4D3dm69eUOFR//Od59LDmJmVZEg8o7VpfWNbTJfZqdF1xJyPlHdjJOMueq3QzvgbGk2J33r37akXETcwaJWJT4kruhGAzqW1NaSrltAmvGbj5j+OmeWVuLWNuTfpdALVw==" /> -->
+		<!-- 		</div> -->
 
+		<!-- 			<div class="soft"> -->
+		
 
-		<div  style="width: 40%; ">
-			<div class="soft">
-				<h2 tabindex="0">
-					<span id="dnn_ctr6335_dnnTITLE_titleLabel11" class="TitleH2">HSPCB
-						Login</span>
+		<!-- 				<div class="col-md-4 col-md-offset-7" > -->
+		<!-- 					<div class="panel panel-default" style="width: 422px; "> -->
+		<div class="flip" style="width: 535px; height: 350px;" align="left">
+
+			<div class="form-group">
+			<h2 tabindex="0" align="center">
+			<span id="dnn_ctr6335_dnnTITLE_titleLabel11" class="TitleH2";">HSPCB Employee
+				Login</span>
+		</h2>
+				<h2 style="background: transparent;">
+					<span id="Label3" style="width: 30%">Employee ID : </span><input
+						name="_ctl0:ContentPlaceHolder1:txtuserid" type="text"
+						id="txtusername" tabindex="1" placeholder="Enter Employee ID"
+						class="form-control" style="width: 321px; margin-bottom: 0px;"><span
+						controltovalidate="txtusername" focusOnError="t"
+						errormessage="Please Enter Username" display="Dynamic"
+						id="RequiredFieldValidator3"
+						evaluationfunction="RequiredFieldValidatorEvaluateIsValid"
+						initialvalue="" style="display: none;">*</span>
 				</h2>
-
-				<div class="col-md-4 col-md-offset-7" >
-					<div class="panel panel-default" style="width: 422px; ">
-						<div class="flip" style="width: 424px; height: 429px">
-							<div class="panel-body">
-								<div class="form-group">
-									<h2 style="background:transparent;">
-										<span id="Label3" >User ID : </span>
-									</h2>
-									<div class="col-sm-9">
-										<input name="_ctl0:ContentPlaceHolder1:txtuserid"
-											type="text" id="txtusername" tabindex="1"
-											placeholder="Enter Username"
-											class="form-control"
-											style="width: 90%; margin-bottom: 0px;" /> <span
-											controltovalidate="txtusername" focusOnError="t"
-											errormessage="Please Enter Username" display="Dynamic"
-											id="RequiredFieldValidator3"
-											evaluationfunction="RequiredFieldValidatorEvaluateIsValid"
-											initialvalue="" style="display: none;">*</span> <span
-											controltovalidate="txtusername"
-											errormessage="Invalid User Name" display="None"
-											id="RegularExpressionValidator3"
-											evaluationfunction="RegularExpressionValidatorEvaluateIsValid"
-											validationexpression="[aA-zZ0-9@`*#$^&amp;_()]*"
-											style="font-size: 12pt; display: none;"></span>
-									</div>
-								</div>
-								<div class="form-group">
-									<h2 style="background: transparent;">
-										<span id="Label5">Password : </span>
-									</h2>
-									<div class="col-sm-9">
-										<input name="_ctl0:ContentPlaceHolder1:txtpwd" type="password"
-											autocomplete="off" id="txtpwd" tabindex="2"
-											class="form-control" placeholder="Enter Password"
-											onblur="return EncryptPassword(&#39;412910246&#39;);"
-											style="width: 90%; margin-bottom: 0px;" /> <span
-											controltovalidate="txtpwd" focusOnError="t"
-											errormessage="Please Enter a Password" display="Dynamic"
-											id="RequiredFieldValidator4"
-											evaluationfunction="RequiredFieldValidatorEvaluateIsValid"
-											initialvalue="" style="display: none;">*</span> <span
-											controltovalidate="txtpwd" errormessage="Invalid Password"
-											display="None" id="RegularExpressionValidator4"
-											evaluationfunction="RegularExpressionValidatorEvaluateIsValid"
-											validationexpression="[aA-zZ0-9@`*#$^&amp;_()]*"
-											style="font-size: 12pt; display: none;"></span>
-									</div>
-								</div>
-<!-- 								<div class="form-group"> -->
-<!-- 									<h2 style="background: transparent"> -->
-<!-- 										<span id="Label6">Enter Text : </span> -->
-<!-- 									</h2> -->
-<!-- 									<div class="col-sm-offset-3 col-sm-9"> -->
-<!-- 										<input name="_ctl0:ContentPlaceHolder1:txtCaptcha" type="text" -->
-<!-- 											maxlength="5" id="txtCaptcha" tabindex="3" -->
-<!-- 											class="form-control" Placeholder="Enter Text" -->
-<!-- 											autocomplete="off" style="width: 90%; margin-bottom: 10px;" /> -->
-<!-- 										<span controltovalidate="txtCaptcha" focusOnError="t" -->
-<!-- 											errormessage="Enter Text as Shown in Image" -->
-<!-- 											id="RequiredFieldValidator1" -->
-<!-- 											evaluationfunction="RequiredFieldValidatorEvaluateIsValid" -->
-<!-- 											initialvalue="" style="font-size: 12pt; visibility: hidden;">*</span> -->
-<!-- 										<span controltovalidate="txtCaptcha" -->
-<!-- 											errormessage="Enter Only Numbers" -->
-<!-- 											id="RegularExpressionValidator1" -->
-<!-- 											evaluationfunction="RegularExpressionValidatorEvaluateIsValid" -->
-<!-- 											validationexpression="\d+" -->
-<!-- 											style="font-size: 12pt; visibility: hidden;">*</span> <img -->
-<!-- 											id="imgCaptcha" class="cap-img" src="Admin/GetImage.aspx" /> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-
-								<div class="form-group" style="text-align: center; height: 94px">
-									<div class="col-sm-offset-3 col-sm-9">
-										<div class="watermark">
-											<input type="submit"
-												name="_ctl0:ContentPlaceHolder1:btnLogin" value="Login"
-												onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;_ctl0:ContentPlaceHolder1:btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))"
-												language="javascript" id="btnLogin" class="button"
-												style="vertical-align: middle;" />
-										<a class="link-g " href="forgotpwd.jsp">Forgot your password?</a>	
-										</div>
-										
-									</div>
-								</div>
-								<div class="form-group" style="text-align: center;">
-									<div class="col-sm-offset-3 col-sm-9" style="height: 32px; ">
-										<strong><span style="">Office Login for
-												Regional Officer and Sub Regional Officer</span></strong>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+				<h2 style="background: transparent;">
+					<span id="Label5" style="width: 30%">Password : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input
+						name="_ctl0:ContentPlaceHolder1:txtpwd" type="password"
+						autocomplete="off" id="txtpwd" tabindex="2" class="form-control"
+						placeholder="Enter Password"
+						onblur="return EncryptPassword(&#39;412910246&#39;);"
+						style="width: 321px; margin-bottom: 0px;"><span
+						controltovalidate="txtpwd" focusOnError="t"
+						errormessage="Please Enter a Password" display="Dynamic"
+						id="RequiredFieldValidator4"
+						evaluationfunction="RequiredFieldValidatorEvaluateIsValid"
+						initialvalue="" style="display: none;">*</span>
+				</h2>
+				<div class="watermark">
+					<br> <input type="submit"
+						name="_ctl0:ContentPlaceHolder1:btnLogin" value="Login"
+						id="btnLogin" class="button" style="vertical-align: middle;">
+					<a class="link-g " href="forgotpwd.jsp">Forgot your password?</a> <br />
+					<br /> <strong><span style="">Office Login for
+							Regional Officer and Sub Regional Officer</span></strong>
 				</div>
 			</div>
 		</div>
-		</form>
+	</form>
 
-		<footer class="site-footer">
-
-		<div class="footer-menu">
-			<div class="layout-container">
-				<div class="region region-footer-menu">
-					<div id="block-copyright"
-						class="block block-block-content block-block-content9984b4f7-0159-44d0-bd6c-b315fb9e9c89">
+	<!-- 									<div class="form-group" style="text-align: center; height: 70px"> -->
+	<!-- 									<div class="col-sm-offset-3 col-sm-9"> -->
 
 
-						<div class="content" tabindex="0">
-
-							<div
-								class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
-								<div class="copyright">
-									Copyright © Haryana State Pollution Control Board, Government
-									Of Haryana 2018.
-									<div class="scrollup"></div>
-									<p>This website belongs to Haryana State Pollution Control
-										Board, Government Of Haryana, India</p>
-<!-- 									<p>Sandeep Sharma (Mob. 9216849317)</p> -->
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-		</div>
-		<div class="footer-last">
-			<div class="layout-container">
-<!-- 				<div class="region region-footer-last"> -->
-<!-- 					<div id="block-visitorno-2" -->
-<!-- 						class="block block-block-content block-block-contentf17fde0b-9226-4e90-9dd0-595e22a4b1d9"> -->
+	<!-- 									</div> -->
+	<!-- 								</div> -->
 
 
-<!-- 						<div class="content" tabindex="0"> -->
-
-<!-- 							<div -->
-<!-- 								class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"> -->
-<!-- 								<div class="visitor"> -->
-<!-- 									Start of SimpleHitCounter Code -->
-<!-- 									<div> -->
-<!-- 										Visitor No.: <img alt="web counter" height="18" -->
-<!-- 											src="http://simplehitcounter.com/hit.php?uid=2229991&amp;f=16777215&amp;b=0" -->
-<!-- 											width="83" /> -->
-<!-- 									</div> -->
-<!-- 									End of SimpleHitCounter Code -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 					<div id="block-lastupdate-3" -->
-<!-- 						class="block block-block-content block-block-contentc2dd4074-d659-42e1-8b12-f9d1c299a9aa"> -->
+	<!-- 										</div> -->
+	<!-- 			</div> -->
+	<!-- 		</div> -->
 
 
-<!-- 						<div class="content" tabindex="0"> -->
+	<!-- 		<footer class="site-footer"> -->
 
-<!-- 							<div -->
-<!-- 								class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"> -->
-<!-- 								<div class="last-update"> -->
-<!-- 									Page last updated on -->
+	<!-- 		<div class="footer-menu"> -->
+	<!-- 			<div class="layout-container"> -->
+	<!-- 				<div class="region region-footer-menu"> -->
+	<!-- 					<div id="block-copyright" -->
+	<!-- 						class="block block-block-content block-block-content9984b4f7-0159-44d0-bd6c-b315fb9e9c89"> -->
 
-<!-- 								</div> -->
-<!-- 							</div> -->
 
-<!-- 						</div> -->
-<!-- 					</div> -->
+	<!-- 						<div class="content" tabindex="0"> -->
 
-<!-- 				</div> -->
+	<!-- 							<div -->
+	<!-- 								class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"> -->
+	<!-- 								<div class="copyright"> -->
+	<!-- 									Copyright © Haryana State Pollution Control Board, Government -->
+	<!-- 									Of Haryana 2018. -->
+	<!-- 									<div class="scrollup"></div> -->
+	<!-- 									<p>This website belongs to Haryana State Pollution Control -->
+	<!-- 										Board, Government Of Haryana, India</p> -->
+	<!-- 									<p>Sandeep Sharma (Mob. 9216849317)</p> -->
+	<!-- 								</div> -->
+	<!-- 							</div> -->
 
-			</div>
-		</div>
+	<!-- 						</div> -->
+	<!-- 					</div> -->
 
-		</footer>
+	<!-- 				</div> -->
+
+	<!-- 			</div> -->
+	<!-- 		</div> -->
+	<!-- 		<div class="footer-last"> -->
+	<!-- 			<div class="layout-container"> -->
+	<!-- 				<div class="region region-footer-last"> -->
+	<!-- 					<div id="block-visitorno-2" -->
+	<!-- 						class="block block-block-content block-block-contentf17fde0b-9226-4e90-9dd0-595e22a4b1d9"> -->
+
+
+	<!-- 						<div class="content" tabindex="0"> -->
+
+	<!-- 							<div -->
+	<!-- 								class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"> -->
+	<!-- 								<div class="visitor"> -->
+	<!-- 									Start of SimpleHitCounter Code -->
+	<!-- 									<div> -->
+	<!-- 										Visitor No.: <img alt="web counter" height="18" -->
+	<!-- 											src="http://simplehitcounter.com/hit.php?uid=2229991&amp;f=16777215&amp;b=0" -->
+	<!-- 											width="83" /> -->
+	<!-- 									</div> -->
+	<!-- 									End of SimpleHitCounter Code -->
+	<!-- 								</div> -->
+	<!-- 							</div> -->
+
+	<!-- 						</div> -->
+	<!-- 					</div> -->
+	<!-- 					<div id="block-lastupdate-3" -->
+	<!-- 						class="block block-block-content block-block-contentc2dd4074-d659-42e1-8b12-f9d1c299a9aa"> -->
+
+
+	<!-- 						<div class="content" tabindex="0"> -->
+
+	<!-- 							<div -->
+	<!-- 								class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"> -->
+	<!-- 								<div class="last-update"> -->
+	<!-- 									Page last updated on -->
+
+	<!-- 								</div> -->
+	<!-- 							</div> -->
+
+	<!-- 						</div> -->
+	<!-- 					</div> -->
+
+	<!-- 				</div> -->
+
+	<!-- 			</div> -->
+	<!-- 		</div> -->
+
+	<!-- 		</footer> -->
 </body>
 </html>
