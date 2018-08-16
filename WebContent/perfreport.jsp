@@ -184,14 +184,14 @@
 <option value="Ballabhgarh" >Ballabhgarh</option>
 <option value="Dharuhera" >Dharuhera</option>
 <option value="Faridabad" >Faridabad</option>
-<option value="GurgaonNorth" >Gurgaon North</option>
-<option value="GurgaonSouth" >Gurgaon South</option>
+<option value="Gurgaon North" >Gurgaon North</option>
+<option value="Gurgaon South" >Gurgaon South</option>
 <option value="Hisar" >Hisar</option>
 <option value="Jind" >Jind</option>
 <option value="Panchkula" >Panchkula</option>
 <option value="Panipat" >Panipat</option>
 <option value="Sonipat" >Sonipat</option>
-<option value="YamunaNagar" >Yamuna Nagar</option>
+<option value="Yamuna Nagar" >Yamuna Nagar</option>
 </select>
                                                     </td>
                                                     <td  align="left"  class="headngblue"> Application Type</td>

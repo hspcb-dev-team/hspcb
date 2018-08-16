@@ -7,19 +7,37 @@
 <title>Haryana State Pollution Control Board</title>
 <!-- <link href="css/CSS_Home/custom.css" rel="stylesheet" /> -->
 <!-- <link href="css/CSS_Home/bootstrap.min.css" rel="stylesheet" /> -->
-<!-- <link href="css/CSS_Home/font-awesome.css" rel="stylesheet" /> -->
-<!-- <link href="css/CSS_Home/portal.css" rel="stylesheet" /> -->
-<!-- <link href="css/CSS_Home/skin.css" rel="stylesheet" /> -->
-<!-- <link href="css/CSS_Home/style.css" rel="stylesheet" /> -->
-<!-- <link href="css/CSS_Home/fontasom.css" rel="stylesheet" /> -->
-<!-- <link href="css/CSS_Home/site-footer.css" rel="stylesheet" /> -->
+<link href="/WEB-INF/primary-menu.css" rel="stylesheet" />
+<link href="/WEB-INF/normalize.css" rel="stylesheet" />
+<link href="/WEB-INF/elements.css" rel="stylesheet" />
+<link href="/WEB-INF/colors.css" rel="stylesheet" />
+<link href="/WEB-INF/layout.css" rel="stylesheet" />
+<link href="/WEB-INF/header.css" rel="stylesheet" />
 <script src="js/jquery-2.1.1.min.js"></script>
 
 <script src="js/bootstrap.min.js"></script>
 
 <link href="css/CSS_Home/jquerysctipttop.css" rel="stylesheet" />
+
 </head>
 <style>
+/**
+ * @file
+ * Float clearing.
+ *
+ * Based on the micro clearfix hack by Nicolas Gallagher, with the :before
+ * pseudo selector removed to allow normal top margin collapse.
+ *
+ * @see http://nicolasgallagher.com/micro-clearfix-hack
+ */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 .btnReport {
 	background: space;
 	border: 2px solid #A74E0C;
@@ -273,8 +291,8 @@ body {
 }
 </style>
 
-<body background="">
-
+<body bgcolor="#E8F6F9">
+<center>
 	<style>
 .link-g {
 	color: #2d4d03;
@@ -432,8 +450,93 @@ body {
 	opacity: 1;
 	right: 0;
 }
+
+.region-header,
+.region-header a,
+.region-header li a.is-active,
+.site-branding__text,
+.site-branding,
+.site-branding__text a,
+.site-branding a,
+.region-secondary-menu .menu-item a,
+.region-secondary-menu .menu-item a.is-active {
+  color: #fffeff;
+}
+
+#header {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header .section {
+	position: relative;
+}
+.region-header {
+	padding: 7px 0px 4px;
+	position: relative;
+	background-color: #d8e1ec;
+    background-image: linear-gradient(to bottom, #d9e2ec 0%, #d9e2ec 100%);
+}
+.region-header .site-branding {
+	margin-top: 0.429em;
+}
+.region-content input[type="text"], .region-content input[type="email"], .region-content input[type="url"], .region-content input[type="password"], .region-content input[type="search"] {
+	height: 28px;
+	padding: 0 6px 0px;
+	border: 1px solid #ccc;
+	color: #666;
+	width: 100%;
+}
+textarea {
+	height: 160px;
+	color: #666;
+}
+.form-item label, .form-wrapper .label {
+	color: #333;
+	font-size: 1.1em;
+	font-weight: normal;
+}
+input[type="button"], input[type="reset"], input[type="submit"] {
+	font-size: 1.1em;
+	padding: 3px 13px;
+}
+input.form-submit:hover, input.form-submit:focus {
+	background: #004900;
+	border: 1px solid #579b60;
+	color: #fff;
+}
+
+
 </style>
-	<form method="post" action="LoginServlet" language="javascript" align="right">
+ 
+	<form method="post" action="LoginServlet" language="javascript">
+	
+	<div class="clearfix region region-header">
+    <div id="block-bartik-branding" class="clearfix site-branding block block-system block-system-branding-block">
+  
+    
+        <a href="index.jsp" title="Department Logo" rel="home" class="site-branding__logo" tabindex="0">
+<!--       <img src = "/WEB-INF/logo.jpg/" alt="Department Logo"/> -->
+    </a>
+        <div class="site-branding__text">
+              <div class="site-branding__name">
+          <h2><a href="index.jsp" title="Department Name" rel="home">Haryana State Pollution Control Board</a>
+        </div>
+                    <div class="site-branding__slogan" tabindex="0">Government of Haryana</div>
+          </div></h2>
+  </div>
+<div id="block-indianemblem-2" class="block block-block-content block-block-content15b387d2-5239-4f83-8523-b73d4f146e9e">
+  
+    
+      <div class="content" tabindex="0">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="harygovt"><a href="http://www.haryana.gov.in" target="_blank" title="Haryana Government logo">
+<!--             <img alt="Haryana Govt logo" src="/WEB-INF/haryana-govt1_1.png/"/> -->
+            </a>  </div>
+</div>
+      
+    </div>
+  </div>
+
+  </div> <br/> <br/>
 		<!-- 		<div class="aspNetHidden"> -->
 		<!-- 			<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" /> -->
 		<!-- 			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" /> -->
@@ -448,14 +551,14 @@ body {
 
 		<!-- 				<div class="col-md-4 col-md-offset-7" > -->
 		<!-- 					<div class="panel panel-default" style="width: 422px; "> -->
-		<div class="flip" style="width: 535px; height: 350px;" align="left">
+		<div class="flip" style="width: 584px; height: 322px;" align="center">
 
 			<div class="form-group">
 			<h2 tabindex="0" align="center">
 			<span id="dnn_ctr6335_dnnTITLE_titleLabel11" class="TitleH2";">HSPCB Employee
 				Login</span>
 		</h2>
-				<h2 style="background: transparent;">
+				<h2 style="width: 549px; ">
 					<span id="Label3" style="width: 30%">Employee ID : </span><input
 						name="_ctl0:ContentPlaceHolder1:txtuserid" type="text"
 						id="txtusername" tabindex="1" placeholder="Enter Employee ID"
@@ -466,7 +569,7 @@ body {
 						evaluationfunction="RequiredFieldValidatorEvaluateIsValid"
 						initialvalue="" style="display: none;">*</span>
 				</h2>
-				<h2 style="background: transparent;">
+				<h2 style="width: 535px; ">
 					<span id="Label5" style="width: 30%">Password : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input
 						name="_ctl0:ContentPlaceHolder1:txtpwd" type="password"
 						autocomplete="off" id="txtpwd" tabindex="2" class="form-control"
@@ -581,5 +684,6 @@ body {
 	<!-- 		</div> -->
 
 	<!-- 		</footer> -->
+	</center>
 </body>
 </html>
