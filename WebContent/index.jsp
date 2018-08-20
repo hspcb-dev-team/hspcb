@@ -50,6 +50,18 @@
 }
 </style>
 <style>
+.footer_bottom {
+	background: #3670a1;
+	padding: 0px 3px 15px 13px;
+	height: 25px;
+	color: #fff;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	line-height: 20px;
+	margin-bottom: 0px;
+}
+
+
 #mixedSlider {
 	position: relative;
 }
@@ -291,7 +303,7 @@ body {
 }
 </style>
 
-<body bgcolor="#E8F6F9">
+<body>
 <center>
 	<style>
 .link-g {
@@ -509,7 +521,7 @@ input.form-submit:hover, input.form-submit:focus {
  
 	<form method="post" action="LoginServlet" language="javascript">
 	
-	<div class="clearfix region region-header">
+	<div class="clearfix region region-header" style="border: thin; background: #6ac">
     <div id="block-bartik-branding" class="clearfix site-branding block block-system block-system-branding-block">
   
     
@@ -523,17 +535,17 @@ input.form-submit:hover, input.form-submit:focus {
                     <div class="site-branding__slogan" tabindex="0">Government of Haryana</div>
           </div></h2>
   </div>
-<div id="block-indianemblem-2" class="block block-block-content block-block-content15b387d2-5239-4f83-8523-b73d4f146e9e">
+<!-- <div id="block-indianemblem-2" class="block block-block-content block-block-content15b387d2-5239-4f83-8523-b73d4f146e9e"> -->
   
     
-      <div class="content" tabindex="0">
+<!--       <div class="content" tabindex="0"> -->
       
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="harygovt"><a href="http://www.haryana.gov.in" target="_blank" title="Haryana Government logo">
+<!--             <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="harygovt"><a href="http://www.haryana.gov.in" target="_blank" title="Haryana Government logo"> -->
 <!--             <img alt="Haryana Govt logo" src="/WEB-INF/haryana-govt1_1.png/"/> -->
-            </a>  </div>
-</div>
+<!--             </a>  </div> -->
+<!-- </div> -->
       
-    </div>
+<!--     </div> -->
   </div>
 
   </div> <br/> <br/>
@@ -585,13 +597,33 @@ input.form-submit:hover, input.form-submit:focus {
 				<div class="watermark">
 					<br> <input type="submit"
 						name="_ctl0:ContentPlaceHolder1:btnLogin" value="Login"
-						id="btnLogin" class="button" style="vertical-align: middle;">
+						id="btnLogin" class="button" style="vertical-align: middle; width: 190px; height: 45px">
 					<a class="link-g " href="forgotpwd.jsp">Forgot your password?</a> <br />
 					<br /> <strong><span style="">Office Login for
 							Regional Officer and Sub Regional Officer</span></strong>
 				</div>
 			</div>
 		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		
+			<section class="footer_bottom">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 center-position">
+							Site designed, hosted by Haryana State Pollution Control Board <br />
+							 © Content Owned, Updated and Maintained by Haryana State
+							Pollution Control Board
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</section>
+		
+		
 	</form>
 
 	<!-- 									<div class="form-group" style="text-align: center; height: 70px"> -->

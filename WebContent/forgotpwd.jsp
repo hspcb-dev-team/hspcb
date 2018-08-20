@@ -12,10 +12,19 @@
 <link href="/WEB-INF/layout.css" rel="stylesheet" />
 <link href="/WEB-INF/header.css" rel="stylesheet" />
 </head>
-<body bgcolor="#E8F6F9">
+<body>
 <center>
 <style>
-
+.footer_bottom {
+	background: #3670a1;
+	padding: 0px 3px 15px 13px;
+	height: 25px;
+	color: #fff;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	line-height: 20px;
+	margin-bottom: 0px;
+}
 .clearfix:after {
   content: "";
   display: table;
@@ -75,11 +84,9 @@ input.form-submit:hover, input.form-submit:focus {
 	border: 1px solid #579b60;
 	color: #fff;
 }
-
 </style>
-
 	<form action="forgotPassword" method="post" name="myform" id="myform">
-		<div class="clearfix region region-header">
+		<div class="clearfix region region-header" style="border: thin; background: #6ac">
     <div id="block-bartik-branding" class="clearfix site-branding block block-system block-system-branding-block">
   
     
@@ -93,72 +100,75 @@ input.form-submit:hover, input.form-submit:focus {
                     <div class="site-branding__slogan" tabindex="0">Government of Haryana</div>
           </div></h2>
   </div>
-<div id="block-indianemblem-2" class="block block-block-content block-block-content15b387d2-5239-4f83-8523-b73d4f146e9e">
+<!-- <div id="block-indianemblem-2" class="block block-block-content block-block-content15b387d2-5239-4f83-8523-b73d4f146e9e"> -->
   
     
-      <div class="content" tabindex="0">
+<!--       <div class="content" tabindex="0"> -->
       
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="harygovt"><a href="http://www.haryana.gov.in" target="_blank" title="Haryana Government logo">
+<!--             <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="harygovt"><a href="http://www.haryana.gov.in" target="_blank" title="Haryana Government logo"> -->
 <!--             <img alt="Haryana Govt logo" src="/WEB-INF/haryana-govt1_1.png/"/> -->
-            </a>  </div>
-</div>
+<!--             </a>  </div> -->
+<!-- </div> -->
       
-    </div>
+<!--     </div> -->
   </div>
+<br/>
+<!-- <br/> -->
 
-  </div> <br/> <br/>
 		<!-- 		<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" id="countrytabs"> -->
 		<!--                             <tbody align="center"><tr> -->
 
 		<!-- 							</tr> -->
 		<!-- 	    </tbody></table> -->
 
-		<div id="country1" style="border:threeddarkshadow; outline-color; color: olive;" align="center">
-		<h2 width="55%" style="width: 577px;">
-			<span id="forgot_label">Reset Password</span>
-		</h2>
+		<div id="country1" class="TitleH2">
+		<h1 width="55%" style="width: 100%;">
+			<span id="forgot_label" >Reset Password</span>
+		</h1>
 
-			<table width="55%" border="1" align="center" cellpadding="2"
-				cellspacing="1" class="tblbdr" style="width: 577px; height: 237px" bgcolor="#F4F7FB">
+			<table border="1" align="center" cellpadding="1"
+				cellspacing="1" class="tblbdr" style="height: 301px; width: 478px">
 
 				<tbody>
+<h2>
+					<tr >
 
-					<tr bgcolor="#F4F7FB">
-
-						<td width="40%" align="right" bgcolor="#E8F6F9" class="headngblue">Employee
-							ID *:</td>
-						<td width="60%" align="left" bgcolor="#E8F6F9"
-							style="color: black" class="txt style6"><input
+						<td align="right" class="headngblue">Employee
+							ID *:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td width="60%" align="left" style="color: black; class="txt style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							name="uid_forgot" type="text" class="txt4" value=""
-							style="width: 180px;"></td>
+							style="width: 180px; height: 20px"></td>
 					</tr>
 
-					<tr bgcolor="#F4F7FB">
-						<td align="right" bgcolor="#E8F6F9" class="headngblue">Enter
-							New Password *:</td>
-						<td align="left" bgcolor="#E8F6F9" class="txt style6"><input
+					<tr >
+						<td align="right" class="headngblue">Enter
+							New Password *:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td align="left"  class="txt style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							name="newPass1_forgot" id="newPass1" type="password" class="txt4"
-							style="width: 180px;"> <span class="txt4">(enter
-								new password)</span></td>
+							style="width: 180px; height: 20px"></td>
+<!-- 							<span class="txt4">(enter -->
+<!-- 								new password)</span> -->
 					</tr>
 
-					<tr bgcolor="#F4F7FB">
-						<td align="right" bgcolor="#E8F6F9" class="headngblue">
-							Re-type New Password*:</td>
-						<td align="left" bgcolor="#E8F6F9" class="txt style6"><input
+					<tr >
+						<td align="right" class="headngblue">
+							Re-type New Password*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td align="left"  class="txt style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							name="newPass2_forgot" id="newPass2" type="password"
-							onblur="setChangePass()" class="txt4" style="width: 180px;">
-							<span class="txt4">(re-enter password)</span></td>
+							onblur="setChangePass()" class="txt4" style="width: 180px; height: 20px"></td>
+<!-- 							<span class="txt4">(re-enter password)</span> -->
 					</tr>
 					
 					<tr>
 										
-						<td align="right" style="height: 57px;" bgcolor="#E8F6F9"><h2><input type="submit" name="Update"
-							value="Update" onclick="/changePassword" class="actionbutton" style="width: 90px; height: 39px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></td>
-						<td style="height: 59px; " bgcolor="#E8F6F9"><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" name="reset"
-							value="Reset" class="actionbutton" style="width: 90px; height: 39px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.jsp">Home</a></h2></td>
+						<td align="right" style="height: 40px;"><h3><input type="submit" name="Update"
+							value="Update" onclick="/changePassword" class="actionbutton" style="width: 94px; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></td>
+						<td style="height: 59px; " ><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" name="reset"
+							value="Reset" class="actionbutton" style="width: 90px; height: 39px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.jsp">Home</a></h3></td>
 					</tr>
+					
 				</tbody>
+				</h2>
 			</table>
 			<!-- 						<table width="95%" border="0" align="center" cellpadding="2" cellspacing="1"> -->
 			<!--               <tbody><tr align="center"> -->
@@ -186,6 +196,23 @@ input.form-submit:hover, input.form-submit:focus {
 			<!--             <br> -->
 			<!--             <br> -->
 		</div>
+		<br/>
+		<br/>
+		
+			<section class="footer_bottom">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 center-position">
+							Site designed, hosted by Haryana State Pollution Control Board <br />
+							 © Content Owned, Updated and Maintained by Haryana State
+							Pollution Control Board
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</section>
+		
+		
 	</form>
 	</center>
 </body>
