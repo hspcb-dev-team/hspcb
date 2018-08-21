@@ -31,18 +31,16 @@ public class LoginServlet extends HttpServlet {
 		System.out.println("User id: login " + id + " Password" + pwd);
 		HttpSession session = request.getSession();
 		session.setAttribute( "uid", id );
-//		session.setAttribute( "PWD", p );
+
 		if (Service.validate(id, pwd)) {
 			try {
 				consentList=Service.getConsentData();
 				
-				ExcelData excelData=new ExcelData();
-				excelData.dataWrite(Service.getConsentData());
+				
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			request.setAttribute("consentList", consentList);
+			//request.setAttribute("consentList", consentList);
 			request.getRequestDispatcher("welcome.jsp").forward(request, response);
 			
 //			out.print("Welcome " + id);

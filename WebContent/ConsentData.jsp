@@ -48,6 +48,21 @@
 <script type="text/javascript" src="/OCMMS/js/prototype/effects.js"></script>
 <script type="text/javascript" src="/OCMMS/js/prototype/slider.js"></script>
 <script type="text/javascript" src="/OCMMS/js/prototype/dragdrop.js"></script>
+<script>
+
+function setSelectedIndex(s)
+
+{
+
+s.options[i-1].selected = true;
+
+return;
+
+}
+
+
+
+</script>
 </head>
 
 <body>
@@ -104,9 +119,9 @@
 		}
 		setColor();
 	</script>
-	<table width="100%" cellspacing="1" cellpadding="1" border="1">
+	<table width="100%" border="1">
 		<tbody>
-		<br/>
+	
 			<tr>
 				<td valign="top" height="31"><table width="224" cellspacing="0"
 						cellpadding="0" border="0">
@@ -170,7 +185,7 @@
 						</tbody>
 					</table><br/></td>
 				<td>
-			 	<form action="ConsentData.jsp"> 
+			 	<form action="ConsentData" method="post"> 
 				<table>
 				
 				
@@ -184,20 +199,21 @@
 <option value="Ballabhgarh" >Ballabhgarh</option>
 <option value="Dharuhera" >Dharuhera</option>
 <option value="Faridabad" >Faridabad</option>
-<option value="GurgaonNorth" >Gurgaon North</option>
-<option value="GurgaonSouth" >Gurgaon South</option>
+<option value="Gurgaon North" >Gurgaon North</option>
+<option value="Gurgaon South" >Gurgaon South</option>
 <option value="Hisar" >Hisar</option>
 <option value="Jind" >Jind</option>
 <option value="Panchkula" >Panchkula</option>
 <option value="Panipat" >Panipat</option>
 <option value="Sonipat" >Sonipat</option>
-<option value="YamunaNagar" >Yamuna Nagar</option>
+<option value="Yamuna Nagar" >Yamuna Nagar</option>
 </select>
                                                     </td>
                                                     <td  align="left"  class="headngblue"> Application Type</td>
                                                     <td align="left" >
                                                         <select name="applicationType" id="applicationType" >
 <option value="All" >All</option>
+<option value="Total" >Total</option>
 <option value="CTO" >CTO</option>
 <option value="Total" >Performance Weightage</option>
 </select>
@@ -218,7 +234,7 @@
 				
 				
 				 </form> 
-				
+			
 				
 				
 				<table align="center" width="100%" cellpadding="0" cellspacing="0"
@@ -227,35 +243,23 @@
 							<td colspan="9" align="center"><span class="headngblue"><h4 align="center">Performance
 										report of regional officers on the basis of Application
 										Disposal of CTE/CTO/HWM/BMW/E-Waste/Plastic Waste</h4> </span></td>
-								<%
- 	String driver = "com.mysql.jdbc.Driver";
- 	String connectionUrl = "jdbc:mysql://localhost:3306/";
- 	String database = "hspcb";
- 	String userid = "root";
- 	String password = "Admin@1234";
- 	String branch=request.getParameter("regionName");
- 	String appType=request.getParameter("applicationType");
- 	try {
- 		Class.forName(driver);
- 	} catch (ClassNotFoundException e) {
- 		e.printStackTrace();
- 	}
- 	Connection connection = DriverManager.getConnection(connectionUrl + database, userid, password);
- 	String sql = "select * from hspcb.PerformanceReport where branch_region=? and application_type=? ";
- 	PreparedStatement statement = connection.prepareStatement(sql);
- 	statement.setString(1, branch);
- 	statement.setString(2, appType);
-	ResultSet resultSet = statement.executeQuery();
- 	
- 	
- 	
- 	//where branch_region=? and application_type=?
- 	/* ResultSet resultSet = statement.executeQuery(sql); */
- %>
+										
+									
+									
+										
+										<div style="text-align: right">
+                                                      <a href="">
+                                                            <span class="innerlink">
+                                                                &nbsp;Print Excel&nbsp;
+                                                            </span>
+                                                        </a>
+                                                    </div>
+										
+	</table>
 <table border="1">
-<tbody>
-			<tr bgcolor="#CCFFCC">
-				<!-- 			<td align="center" class="headngblue" rowspan="2">Region Name</td> -->
+
+			 <tr bgcolor="#CCFFCC">
+							
 				<td align="center" class="headngblue" rowspan="2">Region</td>
 				<td align="center" class="headngblue" rowspan="2">Application
 					type</td>
@@ -284,56 +288,51 @@
 				<td align="center" class="headngblue">Percentage</td>
 				<td align="center" class="headngblue">Number</td>
 				<td align="center" class="headngblue">Percentage</td>
-			</tr>
-<tr>
+			</tr> 
+
 <%
-				try {
-					while (resultSet.next()) {
+    
+ResultSet resultSet=(ResultSet) request.getAttribute("resultSet");	//out.println(resultSet.next());
+					
 			%>
+			
+			<% while (resultSet.next()) { %>
+			<tr>
 			<td><%=resultSet.getString("branch_region")%></td>
 			<td><%=resultSet.getString("Application_Type")%></td>
 
 			<td><%=resultSet.getString("Total_Appln_Received")%></td>
 
-			<td><%=resultSet.getString("Appln_no_30d")%></td>
+			<td><%=resultSet.getInt("Appln_no_30d")%></td>
 
 			<td><%=resultSet.getString("Appln_per_30d")%>%</td>
 
-			<td><%=resultSet.getString("Appln_no_31_45d")%></td>
+			<td><%=resultSet.getInt("Appln_no_31_45d")%></td>
 
 			<td><%=resultSet.getString("Appln_per_31_45d")%>%</td>
 
-			<td><%=resultSet.getString("Appln_no_beyond45d")%></td>
+			<td><%=resultSet.getInt("Appln_no_beyond45d")%></td>
 
 			<td><%=resultSet.getString("Appln_per_beyond45d")%></td>
 
-			<td><%=resultSet.getString("Pending_Appln_no")%></td>
+			<td><%=resultSet.getInt("Pending_Appln_no")%></td>
 
 			<td><%=resultSet.getString("Pending_Appln_per")%></td>
 
-			<td><%=resultSet.getString("Pending_Appln_no_gt45d")%></td>
+			<td><%=resultSet.getInt("Pending_Appln_no_gt45d")%></td>
 
 			<td><%=resultSet.getString("Pending_Appln_per_gt45d")%></td>
 
 			</tr>
-			<%
-				}
+			
+	<%} %>
 
-				} catch (Exception e) {
-					connection.close();
-					e.printStackTrace();
-				}
-			%>
-
-	</tbody>		
+		
 </table>
 						</tr>
 
 					</table>
-			</tr>
-		</tbody>
-	</table>
-
+			
 
 	<style type="text/css">
 

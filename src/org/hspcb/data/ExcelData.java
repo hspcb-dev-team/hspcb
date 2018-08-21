@@ -5,10 +5,14 @@ import org.apache.poi.ss.usermodel.Sheet;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -17,28 +21,32 @@ import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.hspcb.bean.ConsentData;
 import org.hspcb.controller.Service;
 
 public class ExcelData {
 	 
-	List<ConsentData> consentData=new ArrayList<ConsentData>();
+
     Service service=new Service();
-	public void dataWrite(List<ConsentData> consentData) throws SQLException, IOException {
-		
+	public void dataWrite(ResultSet resultSet1) throws SQLException, IOException {
+//		ResultSet resultSet=null;
 		System.out.println("Excel Creation");
 		// Create a Workbook
-        Workbook workbook = new XSSFWorkbook(); // new HSSFWorkbook() for generating `.xls` file
+		XSSFWorkbook workbook = new XSSFWorkbook(); // new HSSFWorkbook() for generating `.xls` file
 
-        /* CreationHelper helps us create instances of various things like DataFormat, 
-           Hyperlink, RichTextString etc, in a format (HSSF, XSSF) independent way */
-        CreationHelper createHelper = workbook.getCreationHelper();
+      /*   CreationHelper helps us create instances of various things like DataFormat, 
+           Hyperlink, RichTextString etc, in a format (HSSF, XSSF) independent way 
+        CreationHelper createHelper = workbook.getCreationHelper();*/
 
         // Create a Sheet
-        Sheet sheet = (Sheet) workbook.createSheet("Application Status");
+        
+        XSSFSheet sheet = workbook.createSheet("Application Status");
+       // Sheet sheet = (Sheet) workbook.createSheet("Application Status");
 
-        // Create a Font for styling header cells
+        /*// Create a Font for styling header cells
         Font headerFont = workbook.createFont();
         headerFont.setBold(true);
         headerFont.setFontHeightInPoints((short) 14);
@@ -46,14 +54,14 @@ public class ExcelData {
 
         // Create a CellStyle with the font
         CellStyle headerCellStyle = workbook.createCellStyle();
-        headerCellStyle.setFont(headerFont);
+        headerCellStyle.setFont(headerFont);*/
 
         // Create a Row
-        Row headerRow = sheet.createRow(0);
+        XSSFRow headerRow = sheet.createRow(0);
 
        //
   
-        this.consentData=consentData;
+//        resultSet1;
         
         // Create cells
        /* for(int i = 0; i < columns.length; i++) {
@@ -66,34 +74,39 @@ public class ExcelData {
         CellStyle dateCellStyle = workbook.createCellStyle();
         dateCellStyle.setDataFormat(createHelper.createDataFormat().getFormat("dd-MM-yyyy"));*/
 
+        //request.setAttribute("resultSet", resultSet);
+//       request.getRequestDispatcher("ConsentData.jsp").include(request, response);
+//        
+        
         // Create Other rows and cells with employees data
         int rowNum = 1;
-        
-        
-        for(ConsentData consentData1: consentData) {
-            Row row = sheet.createRow(rowNum++);
-
-            row.createCell(0)
-                    .setCellValue(consentData1.getApplication_Type());
+      
+     while(resultSet1.next()) {
+    	 System.out.println("writing data");
+    	 XSSFRow row = sheet.createRow(rowNum);
+            row.createCell(0).setCellValue(resultSet1.getString("branch_region"));
 
             row.createCell(1)
-                    .setCellValue(consentData1.getTotal_Appln_Received());
+                    .setCellValue(resultSet1.getString("Application_Type"));
+
             row.createCell(2)
-            .setCellValue(consentData1.getTotal_Appln_Received());
+                    .setCellValue(resultSet1.getInt("Total_Appln_Received"));
             row.createCell(3)
-            .setCellValue(consentData1.getAppln_no_30d ());
+            .setCellValue(resultSet1.getInt("Appln_no_30d"));
             row.createCell(4)
-            .setCellValue(consentData1.getAppln_per_30d ());
+            .setCellValue(resultSet1.getString("Appln_per_30d"));
             row.createCell(5)
-            .setCellValue(consentData1.getAppln_no_31_45d ());
+            .setCellValue(resultSet1.getInt("Appln_no_31_45d"));
             row.createCell(6)
-            .setCellValue(consentData1.getAppln_per_31_45d ());
+            .setCellValue(resultSet1.getString("Appln_per_31_45d"));
             row.createCell(7)
-            .setCellValue(consentData1.getAppln_per_31_45d ());
+            .setCellValue(resultSet1.getString("Appln_per_31_45d"));
             row.createCell(8)
-            .setCellValue(consentData1.getAppln_per_31_45d ());
+            .setCellValue(resultSet1.getInt("Appln_no_beyond45d"));
             row.createCell(9)
-            .setCellValue(consentData1.getAppln_per_31_45d ());
+            .setCellValue(resultSet1.getString("Appln_per_beyond45d"));
+            row.createCell(10)
+            .setCellValue(resultSet1.getInt("Pending_Appln_no"));
 
             /*Cell dateOfBirthCell = row.createCell(2);
             dateOfBirthCell.setCellValue(employee.getDateOfBirth());
@@ -101,6 +114,7 @@ public class ExcelData {
 
             row.createCell(3)
                     .setCellValue(employee.getSalary());*/
+            rowNum++;
         }
 
 		/*// Resize all columns to fit the content size
@@ -109,13 +123,14 @@ public class ExcelData {
         }*/
 
         // Write the output to a file
-        FileOutputStream fileOut = new FileOutputStream("D:/poi-generated-file.xlsx");
+        FileOutputStream fileOut = new FileOutputStream("D:/PerformanceReport.xlsx");
         workbook.write(fileOut);
         fileOut.close();
 
         // Closing the workbook
         workbook.close();
-    }
+   }
+	
 }
 
 	

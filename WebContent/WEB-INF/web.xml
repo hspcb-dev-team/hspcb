@@ -33,6 +33,11 @@
     <servlet-name>fetchData</servlet-name>
     <servlet-class>org.hspcb.servlets.FetchData</servlet-class>
   </servlet>
+   <servlet>
+    <display-name>ConsentData</display-name>
+    <servlet-name>ConsentData</servlet-name>
+    <servlet-class>org.hspcb.servlets.ConsentData</servlet-class>
+  </servlet>
   
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
@@ -57,5 +62,9 @@
   <servlet-mapping>
     <servlet-name>fetchData</servlet-name>
     <url-pattern>/fetchData</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ConsentData</servlet-name>
+    <url-pattern>/ConsentData</url-pattern>
   </servlet-mapping>
 </web-app>
