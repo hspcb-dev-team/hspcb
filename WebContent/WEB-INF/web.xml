@@ -38,7 +38,11 @@
     <servlet-name>ConsentData</servlet-name>
     <servlet-class>org.hspcb.servlets.ConsentData</servlet-class>
   </servlet>
-  
+  <servlet>
+    <display-name>FileDownload</display-name>
+    <servlet-name>FileDownload</servlet-name>
+    <servlet-class>org.hspcb.servlets.FileDownload</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/</url-pattern>
@@ -66,5 +70,9 @@
    <servlet-mapping>
     <servlet-name>ConsentData</servlet-name>
     <url-pattern>/ConsentData</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>FileDownload</servlet-name>
+    <url-pattern>/FileDownload</url-pattern>
   </servlet-mapping>
 </web-app>

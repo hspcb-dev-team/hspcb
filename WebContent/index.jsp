@@ -51,7 +51,7 @@
 </style>
 <style>
 .footer_bottom {
-	background: #3670a1;
+	background: #fffeff;
 	padding: 0px 3px 15px 13px;
 	height: 25px;
 	color: #fff;
@@ -571,7 +571,7 @@ input.form-submit:hover, input.form-submit:focus {
 				Login</span>
 		</h2>
 				<h2 style="width: 549px; ">
-					<span id="Label3" style="width: 30%">Employee ID : </span><input
+					<span id="Label3" style="width: 30%">User ID : </span><input
 						name="_ctl0:ContentPlaceHolder1:txtuserid" type="text"
 						id="txtusername" tabindex="1" placeholder="Enter Employee ID"
 						class="form-control" style="width: 321px; margin-bottom: 0px;"><span
@@ -598,9 +598,9 @@ input.form-submit:hover, input.form-submit:focus {
 					<br> <input type="submit"
 						name="_ctl0:ContentPlaceHolder1:btnLogin" value="Login"
 						id="btnLogin" class="button" style="vertical-align: middle; width: 190px; height: 45px">
-					<a class="link-g " href="forgotpwd.jsp">Forgot your password?</a> <br />
-					<br /> <strong><span style="">Office Login for
-							Regional Officer and Sub Regional Officer</span></strong>
+					<a  href="forgotpwd.jsp">Forgot password</a> <br />
+					<br /> <strong><span style=""> Login for
+							 Officers</span></strong>
 				</div>
 			</div>
 		</div>

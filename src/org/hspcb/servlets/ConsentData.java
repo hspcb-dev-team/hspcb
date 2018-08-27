@@ -51,13 +51,13 @@ public class ConsentData extends HttpServlet {
 				statement = conn.prepareStatement(sql);
 				resultSet =  statement.executeQuery();
 		
-				if(resultSet.next()) {
+			//	if(resultSet.next()) {
 					HttpSession session=request.getSession();
 					request.setAttribute("resultSet", resultSet);
 					request.getRequestDispatcher("ConsentData.jsp").include(request, response);
 						
 				   //  resultSet.close();
-				}
+				//}
 				resultSet =  statement.executeQuery();
 				excelData.dataWrite(resultSet);
 				
@@ -79,13 +79,13 @@ public class ConsentData extends HttpServlet {
 			 	
 
 			 	 resultSet = statement.executeQuery();
-			 	if(resultSet.next()) {
+			 //	if(resultSet.next()) {
 					HttpSession session=request.getSession();
 					request.setAttribute("resultSet", resultSet);
 					request.getRequestDispatcher("ConsentData.jsp").include(request, response);
 						
 				   //  resultSet.close();
-				}
+				//}
 				resultSet =  statement.executeQuery();
 				excelData.dataWrite(resultSet);
 				
@@ -111,13 +111,13 @@ public class ConsentData extends HttpServlet {
 			System.out.println("query is"+sql);
 			resultSet =  statement.executeQuery();
 		
-			if(resultSet.next()) {
+			//if(resultSet.next()) {
 				HttpSession session=request.getSession();
 				request.setAttribute("resultSet", resultSet);
 				request.getRequestDispatcher("ConsentData.jsp").include(request, response);
 					
 			   //  resultSet.close();
-			}
+		//	}
 			resultSet =  statement.executeQuery();
 			excelData.dataWrite(resultSet);
 			

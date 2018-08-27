@@ -104,10 +104,10 @@ return;
 				</td>
 				<td valign="middle" align="center"><a href="perfreport.jsp"><span
 						id="misId" onclick="changeColor(this.id)" class="top-lnks">MIS</span></a></td>
-				<td valign="middle" align="center"><a class="special" href="ieca.jsp"><span
+				<!--<td valign="middle" align="center"> <a class="special" href="ieca.jsp"><span
 						id="inspectionManagementId" onclick="changeColor(this.id)"
 						class="top-lnks">Information Education Communication
-							Activities</span></a></td>				
+							Activities</span></a></td>	 -->			
 				<td valign="middle" align="center"><a href="index.jsp"><span
 						class="top-lnks" id="logoutId" onclick="changeColor(this.id)">Logout</span></a></td>				
 			</tr>
@@ -248,7 +248,7 @@ return;
 									
 										
 										<div style="text-align: right">
-                                                      <a href="">
+                                                      <a href="FileDownload">
                                                             <span class="innerlink">
                                                                 &nbsp;Print Excel&nbsp;
                                                             </span>
