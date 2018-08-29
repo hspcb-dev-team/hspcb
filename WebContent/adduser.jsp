@@ -208,7 +208,7 @@
 						</tbody>
 					</table></td>
 				<td style="width: 100%;">
-				<h2 align="center" ><p>Add New User</p></h2>
+				<h2 align="center" ><p>New User</p></h2>
 				<table border="1" align="center" width="100%" >
 				<tbody align="center" >
 					
@@ -242,11 +242,27 @@
 				<td width="50%">Mobile No*:</td>
 				<td width="50%"><input type="text" name="mobileno" size="35" /></td>
 			</tr>
-			<tr>
+		<!--  	<tr>
 <!-- 				<td>Contact No (Office):</td> -->
-<!-- 				<td><input type="text" name="contactno" /></td> -->
+<!-- 				<td><input type="text" name="contactno" /></td> 
 			</tr>
-						
+						-->
+						<tr>
+				<td width="50%">Password*:</td>
+				<td width="50%"><input required="true" type="text" name="password" size="35" /></td>
+			</tr>
+			
+				<tr>
+				<td width="50%">What was the name of your elementary / primary school?*:</td>
+				<td width="50%"><input required="true" type="text" name="school" size="35" /></td>
+			</tr>
+			
+				<tr>
+				<td width="50%">What was your childhood nickname?</td>
+				<td width="50%"><input required="true" type="text" name="nickname" size="35" /></td>
+			</tr>
+			
+			
 			<tr>
 				<td width="50%"><input type="submit" value="Save" style="width: 140px; "/></td>
 				<td width="50%"><input type="submit" value="Reset" style="width: 140px; "/></td>

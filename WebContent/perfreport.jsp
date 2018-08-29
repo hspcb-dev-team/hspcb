@@ -88,7 +88,14 @@
 					<!-- <a href="/OCMMS/userMaster/openSpcbHome"><span class="top-lnks">Home</span></a> -->
 				</td>
 				<td valign="middle" align="center"><a href="perfreport.jsp"><span
-						id="misId" onclick="changeColor(this.id)" class="top-lnks">MIS</span></a></td>
+						id="misId" onclick="changeColor(this.id)" class="top-lnks">MIS</span></a>
+						
+				<!-- <select name="regionName" class="txt4" id="regionName" >
+<a href="secques.jsp"><option value="All">Officers Performance Report</option></a>
+<option value="Bahadurgarh" >Sub-Region Wise Report</option>
+</select>		
+					 -->	
+						</td>
 				<!-- <td valign="middle" align="center"><a class="special" href="ieca.jsp"><span
 						id="inspectionManagementId" onclick="changeColor(this.id)"
 						class="top-lnks">Information Education Communication
@@ -176,6 +183,7 @@
 				
 				<tr bgcolor="#E8F6F9" >
                                                     <td  align="left"  class="headngblue">Region:</td>
+                                                    
                                                     <td align="left" >
 
                                                         <select name="regionName" class="txt4" id="regionName" >
@@ -194,6 +202,22 @@
 <option value="Yamuna Nagar" >Yamuna Nagar</option>
 </select>
                                                     </td>
+                                                    <td  align="left"  class="headngblue">Office Type:</td>
+                                                    
+                                                    <td align="left" >
+
+                                                        <select name="regionName" class="txt4" id="regionName" >
+<option value="All">All</option>
+<option value="Head Office" >Head Office</option>
+<option value="HEPC Office" >HEPC Office</option>
+<option value="Regional Office" >Regional Office</option>
+<option value="Sub-Region1" >Sub-Region1</option>
+<option value="Sub-Region2" >Sub-Region2</option>
+<option value="Sub-Region3" >Sub-Region3</option>
+<option value="Sub-Region4" >Sub-Region4</option>
+
+</select>
+                                                    </td>
                                                     <td  align="left"  class="headngblue"> Application Type</td>
                                                     <td align="left" >
                                                         <select name="applicationType" id="applicationType" >
@@ -202,8 +226,24 @@
 <option value="CTO" >CTO</option>
 <option value="Total" >Performance Weightage</option>
 </select>
-                                                    </td>
+                                                    
                                                 </tr>
+                                              <!--   <tr>
+                                                </td>
+                                                    
+                                                    <td  align="left"  class="headngblue">Start Date</td>
+                                                    <td align="left" >
+                                                       <input type="date">
+</select>
+                                                    </td>
+                                                    </td>
+                                                    
+                                                    <td  align="left"  class="headngblue">End Date</td>
+                                                    <td align="left" >
+                                                       <input type="date">
+</select>
+                                                    </td>
+                                                </tr> -->
 
 	
 				</table>

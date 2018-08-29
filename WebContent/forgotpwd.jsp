@@ -15,6 +15,10 @@
 <body>
 <center>
 <style>
+
+
+
+
 .footer_bottom {
 	background: #3670a1;
 	padding: 0px 3px 15px 13px;
@@ -85,7 +89,14 @@ input.form-submit:hover, input.form-submit:focus {
 	color: #fff;
 }
 </style>
+	
+	
+	
 	<form action="forgotPassword" method="post" name="myform" id="myform">
+	
+	<input type="text" >
+	
+	
 		<div class="clearfix region region-header" style="border: thin; background: #6ac">
     <div id="block-bartik-branding" class="clearfix site-branding block block-system block-system-branding-block">
   
@@ -122,7 +133,7 @@ input.form-submit:hover, input.form-submit:focus {
 		<!-- 	    </tbody></table> -->
 
 		<div id="country1" class="TitleH2">
-		<h1 width="55%" style="width: 100%;">
+		<h1 style="width: 100%;">
 			<span id="forgot_label" >Reset Password</span>
 		</h1>
 
@@ -130,22 +141,37 @@ input.form-submit:hover, input.form-submit:focus {
 				cellspacing="1" class="tblbdr" style="height: 301px; width: 478px">
 
 				<tbody>
-<h2>
-					<tr >
+
+					
 
 						<td align="right" class="headngblue">Employee
-							ID *:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td width="60%" align="left" style="color: black; class="txt style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
-							name="uid_forgot" type="text" class="txt4" value=""
-							style="width: 180px; height: 20px"></td>
+							ID*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td width="20%" align="left" style="color: blue; class="txt style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input	name="uid_forgot" type="text" class="txt4" value=""	style="width: 200px; height: 20px" required="required"></td>
 					</tr>
+<tr >
 
+						<td align="right" class="headngblue">What was the name of your primary school?
+							:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td width="20%" align="left" style="color: blue; class="txt style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							name="uid_school" type="text" class="txt4" value=""
+							style="width: 200px; height: 20px" required="required"></td>
+					</tr>
+					
+					<tr >
+
+						<td align="right" class="headngblue">What was your childhood nickname?
+							:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td width="20%" align="left" style="color: blue; class="txt style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+							name="uid_nickname" type="text" class="txt4" value=""
+							style="width: 200px; height: 20px" required="required"></td>
+					</tr>
 					<tr >
 						<td align="right" class="headngblue">Enter
 							New Password *:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 						<td align="left"  class="txt style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							name="newPass1_forgot" id="newPass1" type="password" class="txt4"
-							style="width: 180px; height: 20px"></td>
+							style="width: 200px; height: 20px" ></td>
 <!-- 							<span class="txt4">(enter -->
 <!-- 								new password)</span> -->
 					</tr>
@@ -155,7 +181,7 @@ input.form-submit:hover, input.form-submit:focus {
 							Re-type New Password*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 						<td align="left"  class="txt style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
 							name="newPass2_forgot" id="newPass2" type="password"
-							onblur="setChangePass()" class="txt4" style="width: 180px; height: 20px"></td>
+							onblur="setChangePass()" class="txt4" style="width: 200px; height: 20px"></td>
 <!-- 							<span class="txt4">(re-enter password)</span> -->
 					</tr>
 					

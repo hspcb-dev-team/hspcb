@@ -1,13 +1,8 @@
 package org.hspcb.controller;
 
-import java.awt.Toolkit;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.swing.JDialog;
-import javax.swing.JOptionPane;
-
 import org.hspcb.bean.ConsentData;
 import org.hspcb.dao.ConnectMYSQLServer;
 
@@ -18,7 +13,6 @@ public class Service {
 	public static void dbConnect() {
 		ConnectMYSQLServer connectMYSQLServer = new ConnectMYSQLServer();
 		conn = connectMYSQLServer.dbConnect();
-
 	}
 
 	public static boolean validate(String id, String pass) {
@@ -26,7 +20,6 @@ public class Service {
 		try {
 			System.out.println("Getting DB Connection");
 			dbConnect();
-
 			PreparedStatement ps = conn
 					.prepareStatement("select * from hspcb.user_Login where EmployeeId=? and Password=?");
 			ps.setString(1, id);
@@ -51,11 +44,25 @@ public class Service {
 			int value = ps.executeUpdate();
 			if (value == 1)
 				updateStatus = true;
-			System.out.println("Status" + updateStatus);
+
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 		return updateStatus;
+	}
+
+	public static ResultSet getUidDetails(String id) {
+		ResultSet rset = null;
+		try {
+			dbConnect();
+			String sqlQuery = "Select * from hspcb.user_info where EmployeeId=?";
+			PreparedStatement ps = conn.prepareStatement(sqlQuery);
+			ps.setString(1, id);
+			rset = ps.executeQuery();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return rset;
 	}
 
 	/*
@@ -112,7 +119,5 @@ public class Service {
 		}
 		return consnetInfo;
 	}
-	
-	
 
 }
