@@ -121,7 +121,7 @@
 					href="welcome.jsp"><span id="homeId"
 						onclick="changeColor(this.id)" class="top-lnks">Home</span></a> <!-- <a href="/OCMMS/userMaster/openSpcbHome"><span class="top-lnks">Home</span></a> -->
 				</td>
-				<td valign="middle" align="center"><a href="perfreport.jsp"><span
+				<td valign="middle" align="center"><a href="MIS.jsp"><span
 						id="misId" onclick="changeColor(this.id)" class="top-lnks">MIS</span></a></td>
 				<!-- <td valign="middle" align="center">
 				<a class="special"

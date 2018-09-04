@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 
-			request.getRequestDispatcher("welcome.jsp").forward(request, response);
+			request.getRequestDispatcher("perfreport.jsp").forward(request, response);
 
 		} else {
 

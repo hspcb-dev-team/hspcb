@@ -10,7 +10,7 @@
     <servlet-class>org.hspcb.servlets.LoginServlet</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>SROServlet</servlet-name>
+    <servlet-name>SROData</servlet-name>
     <servlet-class>org.hspcb.servlets.SROData</servlet-class>
   </servlet>
   <servlet>
@@ -43,6 +43,11 @@
     <servlet-name>FileDownload</servlet-name>
     <servlet-class>org.hspcb.servlets.FileDownload</servlet-class>
   </servlet>
+   <servlet>
+    <display-name>SubRegionFileDownload</display-name>
+    <servlet-name>SubRegionFileDownload</servlet-name>
+    <servlet-class>org.hspcb.servlets.SubRegionFileDownload</servlet-class>
+  </servlet>
    
 <servlet>
    <servlet-name>UploadServlet</servlet-name>
@@ -58,7 +63,7 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>SROServlet</servlet-name>
+    <servlet-name>SROData</servlet-name>
     <url-pattern>/SROData</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
@@ -85,4 +90,9 @@
     <servlet-name>FileDownload</servlet-name>
     <url-pattern>/FileDownload</url-pattern>
   </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>SubRegionFileDownload</servlet-name>
+    <url-pattern>/SubRegionFileDownload</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

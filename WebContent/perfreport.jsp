@@ -48,6 +48,17 @@
 <script type="text/javascript" src="/OCMMS/js/prototype/effects.js"></script>
 <script type="text/javascript" src="/OCMMS/js/prototype/slider.js"></script>
 <script type="text/javascript" src="/OCMMS/js/prototype/dragdrop.js"></script>
+
+<script>
+function goToNewPage(dropdownlist)
+ {
+ var url = dropdownlist.options(dropdownlist.selectedIndex).value;
+ if (url != "")
+ {
+ window.open(url);
+ }
+ }
+</script>
 </head>
 
 <body>
@@ -87,14 +98,19 @@
 						id="homeId" onclick="changeColor(this.id)" class="top-lnks">Home</span></a>
 					<!-- <a href="/OCMMS/userMaster/openSpcbHome"><span class="top-lnks">Home</span></a> -->
 				</td>
-				<td valign="middle" align="center"><a href="perfreport.jsp"><span
+				<td valign="middle" align="center">
+				<!-- <form name="dropdown"> -->
+				
+				<a href="MIS.jsp"><span
 						id="misId" onclick="changeColor(this.id)" class="top-lnks">MIS</span></a>
+				
+				<!--  <select name="regionName" class="txt4" id="regionName" >
+<option value="officersreport">Officers Performance Report</option>
+<option value="subregionreport" >Sub-Region Wise Report</option>
+</select>		 -->
+						<!-- <input type=button value="Go" onclick="goToNewPage(document.dropdown.list)">
 						
-				<!-- <select name="regionName" class="txt4" id="regionName" >
-<a href="secques.jsp"><option value="All">Officers Performance Report</option></a>
-<option value="Bahadurgarh" >Sub-Region Wise Report</option>
-</select>		
-					 -->	
+						</form> -->
 						</td>
 				<!-- <td valign="middle" align="center"><a class="special" href="ieca.jsp"><span
 						id="inspectionManagementId" onclick="changeColor(this.id)"
@@ -177,90 +193,7 @@
 						</tbody>
 					</table><br/></td>
 				<td>
-			 	<form action="ConsentData" method="post"> 
-				<table>
-				
-				
-				<tr bgcolor="#E8F6F9" >
-                                                    <td  align="left"  class="headngblue">Region:</td>
-                                                    
-                                                    <td align="left" >
-
-                                                        <select name="regionName" class="txt4" id="regionName" >
-<option value="All">All</option>
-<option value="Bahadurgarh" >Bahadurgarh</option>
-<option value="Ballabhgarh" >Ballabhgarh</option>
-<option value="Dharuhera" >Dharuhera</option>
-<option value="Faridabad" >Faridabad</option>
-<option value="Gurgaon North" >Gurgaon North</option>
-<option value="Gurgaon South" >Gurgaon South</option>
-<option value="Hisar" >Hisar</option>
-<option value="Jind" >Jind</option>
-<option value="Panchkula" >Panchkula</option>
-<option value="Panipat" >Panipat</option>
-<option value="Sonipat" >Sonipat</option>
-<option value="Yamuna Nagar" >Yamuna Nagar</option>
-</select>
-                                                    </td>
-                                                    <td  align="left"  class="headngblue">Office Type:</td>
-                                                    
-                                                    <td align="left" >
-
-                                                        <select name="regionName" class="txt4" id="regionName" >
-<option value="All">All</option>
-<option value="Head Office" >Head Office</option>
-<option value="HEPC Office" >HEPC Office</option>
-<option value="Regional Office" >Regional Office</option>
-<option value="Sub-Region1" >Sub-Region1</option>
-<option value="Sub-Region2" >Sub-Region2</option>
-<option value="Sub-Region3" >Sub-Region3</option>
-<option value="Sub-Region4" >Sub-Region4</option>
-
-</select>
-                                                    </td>
-                                                    <td  align="left"  class="headngblue"> Application Type</td>
-                                                    <td align="left" >
-                                                        <select name="applicationType" id="applicationType" >
-<option value="All" >All</option>
-<option value="Total" >Total</option>
-<option value="CTO" >CTO</option>
-<option value="Total" >Performance Weightage</option>
-</select>
-                                                    
-                                                </tr>
-                                              <!--   <tr>
-                                                </td>
-                                                    
-                                                    <td  align="left"  class="headngblue">Start Date</td>
-                                                    <td align="left" >
-                                                       <input type="date">
-</select>
-                                                    </td>
-                                                    </td>
-                                                    
-                                                    <td  align="left"  class="headngblue">End Date</td>
-                                                    <td align="left" >
-                                                       <input type="date">
-</select>
-                                                    </td>
-                                                </tr> -->
-
-	
-				</table>
-				
-				<table width="100%" align="center">
-
-                                                <tr>
-                                                    <td align="center"><input type="submit" name="save" value="Search" class="actionbutton" ></td>
-
-                                                </tr>
-
-                                            </table>
-				
-				
-				 </form> 
-				
-				
+			 	
 			
 
 	<style type="text/css">

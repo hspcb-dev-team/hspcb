@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<%@page import="java.sql.*"%>
+<%@page import="java.sql.DriverManager"%> 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
@@ -48,20 +48,16 @@
 <script type="text/javascript" src="/OCMMS/js/prototype/effects.js"></script>
 <script type="text/javascript" src="/OCMMS/js/prototype/slider.js"></script>
 <script type="text/javascript" src="/OCMMS/js/prototype/dragdrop.js"></script>
+
 <script>
-
-function setSelectedIndex(s)
-
-{
-
-s.options[i-1].selected = true;
-
-return;
-
-}
-
-
-
+function goToNewPage(dropdownlist)
+ {
+ var url = dropdownlist.options(dropdownlist.selectedIndex).value;
+ if (url != "")
+ {
+ window.open(url);
+ }
+ }
 </script>
 </head>
 
@@ -102,9 +98,21 @@ return;
 						id="homeId" onclick="changeColor(this.id)" class="top-lnks">Home</span></a>
 					<!-- <a href="/OCMMS/userMaster/openSpcbHome"><span class="top-lnks">Home</span></a> -->
 				</td>
-				<td valign="middle" align="center"><a href="MIS.jsp"><span
-						id="misId" onclick="changeColor(this.id)" class="top-lnks">MIS</span></a></td>
-				<!--<td valign="middle" align="center"> <a class="special" href="ieca.jsp"><span
+				<td valign="middle" align="center">
+				<!-- <form name="dropdown"> -->
+				
+				<a href="MIS.jsp"><span
+						id="misId" onclick="changeColor(this.id)" class="top-lnks">MIS</span></a>
+				
+				<!--  <select name="regionName" class="txt4" id="regionName" >
+<option value="officersreport">Officers Performance Report</option>
+<option value="subregionreport" >Sub-Region Wise Report</option>
+</select>		 -->
+						<!-- <input type=button value="Go" onclick="goToNewPage(document.dropdown.list)">
+						
+						</form> -->
+						</td>
+				<!-- <td valign="middle" align="center"><a class="special" href="ieca.jsp"><span
 						id="inspectionManagementId" onclick="changeColor(this.id)"
 						class="top-lnks">Information Education Communication
 							Activities</span></a></td>	 -->			
@@ -119,9 +127,9 @@ return;
 		}
 		setColor();
 	</script>
-	<table width="100%" border="1">
+	<table width="100%" cellspacing="1" cellpadding="1" border="1">
 		<tbody>
-	
+		<br/>
 			<tr>
 				<td valign="top" height="31"><table width="224" cellspacing="0"
 						cellpadding="0" border="0">
@@ -185,154 +193,9 @@ return;
 						</tbody>
 					</table><br/></td>
 				<td>
-			 	<form action="ConsentData" method="post"> 
-				<table>
-				
-				
-				<tr bgcolor="#E8F6F9" >
-                                                    <td  align="left"  class="headngblue">Region:</td>
-                                                    <td align="left" >
-
-                                                        <select name="regionName" class="txt4" id="regionName" >
-<option value="All">All</option>
-<option value="Bahadurgarh" >Bahadurgarh</option>
-<option value="Ballabhgarh" >Ballabhgarh</option>
-<option value="Dharuhera" >Dharuhera</option>
-<option value="Faridabad" >Faridabad</option>
-<option value="Gurgaon North" >Gurgaon North</option>
-<option value="Gurgaon South" >Gurgaon South</option>
-<option value="Hisar" >Hisar</option>
-<option value="Jind" >Jind</option>
-<option value="Panchkula" >Panchkula</option>
-<option value="Panipat" >Panipat</option>
-<option value="Sonipat" >Sonipat</option>
-<option value="Yamuna Nagar" >Yamuna Nagar</option>
-</select>
-                                                    </td>
-                                                    <td  align="left"  class="headngblue"> Application Type</td>
-                                                    <td align="left" >
-                                                        <select name="applicationType" id="applicationType" >
-<option value="All" >All</option>
-<option value="Total" >Total</option>
-<option value="CTO" >CTO</option>
-<option value="Total" >Performance Weightage</option>
-</select>
-                                                    </td>
-                                                </tr>
-
-	
-				</table>
-				
-				<table width="100%" align="center">
-
-                                                <tr>
-                                                    <td align="center"><input type="submit" name="save" value="Search" class="actionbutton" ></td>
-
-                                                </tr>
-
-                                            </table>
-				
-				
-				 </form> 
-			
-				
-				
-				<table align="center" width="100%" cellpadding="0" cellspacing="0"
-						class="tab-txt">
-						<tr>
-							<td colspan="9" align="center"><span class="headngblue"><h4 align="center">Performance
-										report of regional officers on the basis of Application
-										Disposal of CTE/CTO/HWM/BMW/E-Waste/Plastic Waste</h4> </span></td>
-										
-									
-									
-										
-										<div style="text-align: right">
-                                                      <a href="FileDownload">
-                                                            <span class="innerlink">
-                                                                &nbsp;Print Excel&nbsp;
-                                                            </span>
-                                                        </a>
-                                                    </div>
-										
-	</table>
-<table border="1">
-
-			 <tr bgcolor="#CCFFCC">
-							
-				<td align="center" class="headngblue" rowspan="2">Region</td>
-				<td align="center" class="headngblue" rowspan="2">Application
-					type</td>
-				<td align="center" class="headngblue" rowspan="2">Total
-					applications received</td>
-				<td align="center" class="headngblue" colspan="2">Applications
-					decided within 30 days</td>
-				<td align="center" class="headngblue" colspan="2">Applications
-					decided within 31-45 days</td>
-				<td align="center" class="headngblue" colspan="2">Applications
-					decided beyond 45 days</td>
-				<td align="center" class="headngblue" colspan="2">Pending
-					Applications</td>
-				<td align="center" class="headngblue" colspan="2">Pending
-					Application more than 45 days</td>
-
-			</tr>
-			<tr bgcolor="#CCFFCC">
-				<td align="center" class="headngblue">Number</td>
-				<td align="center" class="headngblue">Percentage</td>
-				<td align="center" class="headngblue">Number</td>
-				<td align="center" class="headngblue">Percentage</td>
-				<td align="center" class="headngblue">Number</td>
-				<td align="center" class="headngblue">Percentage</td>
-				<td align="center" class="headngblue">Number</td>
-				<td align="center" class="headngblue">Percentage</td>
-				<td align="center" class="headngblue">Number</td>
-				<td align="center" class="headngblue">Percentage</td>
-			</tr> 
-
-<%
-    
-ResultSet resultSet=(ResultSet) request.getAttribute("resultSet");	//out.println(resultSet.next());
-					
-			%>
-			
-			<% while (resultSet.next()) { %>
-			<tr>
-			<td><%=resultSet.getString("branch_region")%></td>
-			<td><%=resultSet.getString("Application_Type")%></td>
-
-			<td><%=resultSet.getString("Total_Appln_Received")%></td>
-
-			<td><%=resultSet.getInt("Appln_no_30d")%></td>
-
-			<td><%=resultSet.getString("Appln_per_30d")%>%</td>
-
-			<td><%=resultSet.getInt("Appln_no_31_45d")%></td>
-
-			<td><%=resultSet.getString("Appln_per_31_45d")%>%</td>
-
-			<td><%=resultSet.getInt("Appln_no_beyond45d")%></td>
-
-			<td><%=resultSet.getString("Appln_per_beyond45d")%></td>
-
-			<td><%=resultSet.getInt("Pending_Appln_no")%></td>
-
-			<td><%=resultSet.getString("Pending_Appln_per")%></td>
-
-			<td><%=resultSet.getInt("Pending_Appln_no_gt45d")%></td>
-
-			<td><%=resultSet.getString("Pending_Appln_per_gt45d")%></td>
-
-			</tr>
-			
-	<%} %>
-
-		
-</table>
-						</tr>
-
-					</table>
-			
+			 	<a href="OfficersReport.jsp">Officers Performance Report</a>
+<br/>
+<a href="Sub-RegionReport.jsp">Sub-Region wise monitoring report</a>
 
 	<style type="text/css">
 
