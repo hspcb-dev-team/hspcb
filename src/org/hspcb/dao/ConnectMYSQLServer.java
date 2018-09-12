@@ -5,8 +5,8 @@ import java.sql.DriverManager;
 
 public class ConnectMYSQLServer {
 
-	private  final String db_connect_string = "jdbc:mysql://localhost:3306/";
-	private  final String db_userid = "root";
+	private final String db_connect_string = "jdbc:mysql://localhost:3306/";
+	private final String db_userid = "root";
 	private final String db_password = "Admin@1234";
 
 	public Connection dbConnect() {

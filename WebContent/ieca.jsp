@@ -87,7 +87,7 @@
 						id="homeId" onclick="changeColor(this.id)" class="top-lnks">Home</span></a>
 					<!-- <a href="/OCMMS/userMaster/openSpcbHome"><span class="top-lnks">Home</span></a> -->
 				</td>
-				<td valign="middle" align="center"><a href="perfreport.jsp"><span
+				<td valign="middle" align="center"><a href="MIS.jsp"><span
 						id="misId" onclick="changeColor(this.id)" class="top-lnks">MIS</span></a></td>
 				<td valign="middle" align="center"><a class="special" href="ieca.jsp"><span
 						id="inspectionManagementId" onclick="changeColor(this.id)"
@@ -151,6 +151,17 @@
 										</tbody>
 									</table>
 								</td>
+							</tr>
+							<tr>
+							
+							  <form action = "UploadServlet" method = "post"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" size = "50" />
+         <br />
+         <input type = "submit" value = "Upload File" />
+      </form>
+							
+							
 							</tr>
 						</tbody>
 					</table>

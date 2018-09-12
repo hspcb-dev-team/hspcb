@@ -121,12 +121,13 @@
 					href="welcome.jsp"><span id="homeId"
 						onclick="changeColor(this.id)" class="top-lnks">Home</span></a> <!-- <a href="/OCMMS/userMaster/openSpcbHome"><span class="top-lnks">Home</span></a> -->
 				</td>
-				<td valign="middle" align="center"><a href="perfreport.jsp"><span
+				<td valign="middle" align="center"><a href="MIS.jsp"><span
 						id="misId" onclick="changeColor(this.id)" class="top-lnks">MIS</span></a></td>
-				<td valign="middle" align="center"><a class="special"
+				<!-- <td valign="middle" align="center">
+				<a class="special"
 					href="ieca.jsp"><span id="inspectionManagementId"
 						onclick="changeColor(this.id)" class="top-lnks">Information
-							Education Communication Activities</span></a></td>
+							Education Communication Activities</span></a></td> -->
 				<td valign="middle" align="center"><a href="index.jsp"><span
 						class="top-lnks" id="logoutId" onclick="changeColor(this.id)">Logout</span></a></td>
 			</tr>

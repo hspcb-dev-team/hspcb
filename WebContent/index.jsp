@@ -51,7 +51,7 @@
 </style>
 <style>
 .footer_bottom {
-	background: #3670a1;
+	background: #fffeff;
 	padding: 0px 3px 15px 13px;
 	height: 25px;
 	color: #fff;
@@ -526,7 +526,7 @@ input.form-submit:hover, input.form-submit:focus {
   
     
         <a href="index.jsp" title="Department Logo" rel="home" class="site-branding__logo" tabindex="0">
-<!--       <img src = "/WEB-INF/logo.jpg/" alt="Department Logo"/> -->
+
     </a>
         <div class="site-branding__text">
               <div class="site-branding__name">
@@ -535,34 +535,11 @@ input.form-submit:hover, input.form-submit:focus {
                     <div class="site-branding__slogan" tabindex="0">Government of Haryana</div>
           </div></h2>
   </div>
-<!-- <div id="block-indianemblem-2" class="block block-block-content block-block-content15b387d2-5239-4f83-8523-b73d4f146e9e"> -->
-  
-    
-<!--       <div class="content" tabindex="0"> -->
-      
-<!--             <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="harygovt"><a href="http://www.haryana.gov.in" target="_blank" title="Haryana Government logo"> -->
-<!--             <img alt="Haryana Govt logo" src="/WEB-INF/haryana-govt1_1.png/"/> -->
-<!--             </a>  </div> -->
-<!-- </div> -->
-      
-<!--     </div> -->
+
   </div>
 
   </div> <br/> <br/>
-		<!-- 		<div class="aspNetHidden"> -->
-		<!-- 			<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" /> -->
-		<!-- 			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" /> -->
-		<!-- 			<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" -->
-		<!-- 				value="" /> <input type="hidden" name="__VIEWSTATE" -->
-		<!-- 				id="__VIEWSTATE" -->
-		<!-- 				value="FtrEqPWvR2qNLspYwdRCELcaWiBxKsYGys6zLDrsUIN2sCyhjBAw07NlgtC+j+Kjp9umwp++hMYjKa+xBZv6sqxGuOCRnd0Y4hKFM4D3dm69eUOFR//Od59LDmJmVZEg8o7VpfWNbTJfZqdF1xJyPlHdjJOMueq3QzvgbGk2J33r37akXETcwaJWJT4kruhGAzqW1NaSrltAmvGbj5j+OmeWVuLWNuTfpdALVw==" /> -->
-		<!-- 		</div> -->
-
-		<!-- 			<div class="soft"> -->
 		
-
-		<!-- 				<div class="col-md-4 col-md-offset-7" > -->
-		<!-- 					<div class="panel panel-default" style="width: 422px; "> -->
 		<div class="flip" style="width: 584px; height: 322px;" align="center">
 
 			<div class="form-group">
@@ -571,7 +548,7 @@ input.form-submit:hover, input.form-submit:focus {
 				Login</span>
 		</h2>
 				<h2 style="width: 549px; ">
-					<span id="Label3" style="width: 30%">Employee ID : </span><input
+					<span id="Label3" style="width: 30%">User ID : </span><input
 						name="_ctl0:ContentPlaceHolder1:txtuserid" type="text"
 						id="txtusername" tabindex="1" placeholder="Enter Employee ID"
 						class="form-control" style="width: 321px; margin-bottom: 0px;"><span
@@ -598,9 +575,10 @@ input.form-submit:hover, input.form-submit:focus {
 					<br> <input type="submit"
 						name="_ctl0:ContentPlaceHolder1:btnLogin" value="Login"
 						id="btnLogin" class="button" style="vertical-align: middle; width: 190px; height: 45px">
-					<a class="link-g " href="forgotpwd.jsp">Forgot your password?</a> <br />
-					<br /> <strong><span style="">Office Login for
-							Regional Officer and Sub Regional Officer</span></strong>
+					<a  href="forgotpwd.jsp">Forgot password</a> <br />
+						
+					<br /> <strong><span style=""> Login for
+							 Officers</span></strong>
 				</div>
 			</div>
 		</div>

@@ -13,20 +13,14 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.hspcb.controller.Service;
 
-public class ExcelData {
+public class SubRegionExcel {
 
-<<<<<<< HEAD
-    Service service=new Service(); 
-=======
-	String columns[] = { "Region", "ApplicationType", "Total applications", "Applications no 30", "Applications per30",
-			"Applications no 31-45", "Applications per 31-45", "Applications beyond45", "Applications per45",
-			"Pending app", "Pendinggt45" };
+	String columns[] = { "Region", "Office", "Designation", "Number Of Received Application", "Number Of Pending Application",
+			"Number Of Granted Application", "Number Of Rejected Application" };
 
-	String sub_columns[] = { " ", " ", " ", "Number", "Percentage", "Number", "Percentage", "Number", "Percentage",
-			"Number", "Percentage" };
+	
 	Service service = new Service();
 
->>>>>>> branch 'master' of https://github.com/hspcb-dev-team/hspcb.git
 	public void dataWrite(ResultSet resultSet1) throws SQLException, IOException {
 
 		System.out.println("Excel Creation");
@@ -55,31 +49,28 @@ public class ExcelData {
 			cell.setCellValue(columns[i]);
 			cell.setCellStyle(headerCellStyle);
 		}
-		// Create a Row
+		/*// Create a Row
 		XSSFRow subheaderRow = sheet.createRow(1);
 
 		for (int i = 0; i < sub_columns.length; i++) {
 			Cell cell = subheaderRow.createCell(i);
 			cell.setCellValue(sub_columns[i]);
 			cell.setCellStyle(headerCellStyle);
-		}
+		}*/
 
 		// Create Other rows and cells with employees data
-		int rowNum = 2;
+		int rowNum = 1;
 
 		while (resultSet1.next()) {
 			XSSFRow row = sheet.createRow(rowNum);
-			row.createCell(0).setCellValue(resultSet1.getString("branch_region"));
-			row.createCell(1).setCellValue(resultSet1.getString("Application_Type"));
-			row.createCell(2).setCellValue(resultSet1.getInt("Total_Appln_Received"));
-			row.createCell(3).setCellValue(resultSet1.getInt("Appln_no_30d"));
-			row.createCell(4).setCellValue(resultSet1.getString("Appln_per_30d"));
-			row.createCell(5).setCellValue(resultSet1.getInt("Appln_no_31_45d"));
-			row.createCell(6).setCellValue(resultSet1.getString("Appln_per_31_45d"));
-			row.createCell(7).setCellValue(resultSet1.getString("Appln_per_31_45d"));
-			row.createCell(8).setCellValue(resultSet1.getInt("Appln_no_beyond45d"));
-			row.createCell(9).setCellValue(resultSet1.getString("Appln_per_beyond45d"));
-			row.createCell(10).setCellValue(resultSet1.getInt("Pending_Appln_no"));
+			row.createCell(0).setCellValue(resultSet1.getString("region"));
+			row.createCell(1).setCellValue(resultSet1.getString("Office"));
+			row.createCell(2).setCellValue(resultSet1.getString("Designation"));
+			row.createCell(3).setCellValue(resultSet1.getInt("App_Rcvd"));
+			row.createCell(4).setCellValue(resultSet1.getInt("pend_app"));
+			row.createCell(5).setCellValue(resultSet1.getInt("grant_app"));
+			row.createCell(6).setCellValue(resultSet1.getInt("rej_app"));
+		
 			rowNum++;
 		}
 
@@ -87,14 +78,14 @@ public class ExcelData {
 		for (int i = 0; i < columns.length; i++) {
 			sheet.autoSizeColumn(i);
 		}
-
+/*
 		// Resize all columns to fit the content size
 		for (int i = 0; i < sub_columns.length; i++) {
 			sheet.autoSizeColumn(i);
 		}
-
+*/
 		// Write the output to a file
-		FileOutputStream fileOut = new FileOutputStream("D:/PerformanceReport.xlsx");
+		FileOutputStream fileOut = new FileOutputStream("D:/SubPerformanceReport.xlsx");
 		workbook.write(fileOut);
 		fileOut.close();
 
@@ -102,4 +93,4 @@ public class ExcelData {
 		workbook.close();
 	}
 
-}
+}

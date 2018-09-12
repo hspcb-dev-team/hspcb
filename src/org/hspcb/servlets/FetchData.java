@@ -5,9 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,17 +15,9 @@ import org.hspcb.dao.ConnectMYSQLServer;
 /**
  * Servlet implementation class FetchData
  */
-//@WebServlet("/FetchData")
+
 public class FetchData extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	// public FetchData() {
-	// super();
-	// // TODO Auto-generated constructor stub
-	// }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
@@ -35,23 +25,7 @@ public class FetchData extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		// response.getWriter().append("Served at: ").append(request.getContextPath());
 
-//		String region = request.getParameter("Branch_Region");
-//		String applnType = request.getParameter("Application_Type");
-//		String totalApplnReceived = request.getParameter("Total_Appln_Received");
-//		String Appln_no_30d = request.getParameter("Appln_no_30d");
-//		String Appln_per_30d = request.getParameter("Appln_per_30d");
-//		String Appln_no_31_45d = request.getParameter("Appln_no_31_45d");
-//		String Appln_per_31_45d = request.getParameter("Appln_per_31_45d");
-//		String Appln_no_beyond45d = request.getParameter("Appln_no_beyond45d");
-//		String Appln_per_beyond45d = request.getParameter("Appln_per_beyond45d");
-//		String Pending_Appln_no = request.getParameter("Pending_Appln_no");
-//		String Pending_Appln_per = request.getParameter("Pending_Appln_per");
-//		String Pending_Appln_no_gt45d = request.getParameter("Pending_Appln_no_gt45d");
-//		String Pending_Appln_per_gt45d = request.getParameter("Pending_Appln_per_gt45d");
-		
 		String region = request.getParameter("region");
 		String applnType = request.getParameter("apptype");
 		String totalApplnReceived = request.getParameter("apprec");
@@ -104,14 +78,5 @@ public class FetchData extends HttpServlet {
 			System.out.println(e.getMessage());
 		}
 	}
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	// protected void doPost(HttpServletRequest request, HttpServletResponse
-	// response) throws ServletException, IOException {
-	// // TODO Auto-generated method stub
-	// doGet(request, response);
-	// }
 
 }
